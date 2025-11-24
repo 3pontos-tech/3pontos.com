@@ -5,9 +5,15 @@
     <div
         class="hp-container relative z-10 grid h-full grid-cols-1 gap-x-12 py-4 sm:py-6 md:py-8 lg:grid-cols-[1fr_2fr] lg:py-10 xl:py-16"
     >
-        <div class="relative m-0 hidden h-full items-center justify-center lg:block">
+        <div
+            class="relative m-0 hidden h-full items-center justify-center mask-t-from-95% mask-t-to-99% mask-b-from-95% mask-b-to-99% lg:block"
+        >
             <div class="absolute inset-0 h-full overflow-hidden">
-                <img src="{{ asset('images/3pontos/grids-vertical.svg') }}" alt="" class="h-full w-full" />
+                <img
+                    src="{{ asset('images/3pontos/grids-vertical.svg') }}"
+                    alt=""
+                    class="h-full w-full object-cover"
+                />
             </div>
         </div>
 
