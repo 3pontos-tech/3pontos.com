@@ -4,8 +4,38 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "610f1499d5df31d5b4d7e84ff9a77393",
+    "content-hash": "cdf4aac82393e4748c28121f9ef515b5",
     "packages": [
+        {
+            "name": "3pontos/portal",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/portal",
+                "reference": "4df9f47b2b7c03d9495af78bc50fa48f4858f7b2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TresPontosTech\\Portal\\Providers\\PortalServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TresPontosTech\\Portal\\": "src/",
+                    "TresPontosTech\\Portal\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
         {
             "name": "anourvalar/eloquent-serialize",
             "version": "1.3.4",
@@ -224,16 +254,16 @@
         },
         {
             "name": "brick/math",
-            "version": "0.14.0",
+            "version": "0.14.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brick/math.git",
-                "reference": "113a8ee2656b882d4c3164fa31aa6e12cbb7aaa2"
+                "reference": "f05858549e5f9d7bb45875a75583240a38a281d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/113a8ee2656b882d4c3164fa31aa6e12cbb7aaa2",
-                "reference": "113a8ee2656b882d4c3164fa31aa6e12cbb7aaa2",
+                "url": "https://api.github.com/repos/brick/math/zipball/f05858549e5f9d7bb45875a75583240a38a281d0",
+                "reference": "f05858549e5f9d7bb45875a75583240a38a281d0",
                 "shasum": ""
             },
             "require": {
@@ -272,7 +302,7 @@
             ],
             "support": {
                 "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.14.0"
+                "source": "https://github.com/brick/math/tree/0.14.1"
             },
             "funding": [
                 {
@@ -280,7 +310,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-29T12:40:03+00:00"
+            "time": "2025-11-24T14:40:29+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -353,16 +383,16 @@
         },
         {
             "name": "chillerlan/php-qrcode",
-            "version": "5.0.4",
+            "version": "5.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/chillerlan/php-qrcode.git",
-                "reference": "390393e97a6e42ccae0e0d6205b8d4200f7ddc43"
+                "reference": "7b66282572fc14075c0507d74d9837dab25b38d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/chillerlan/php-qrcode/zipball/390393e97a6e42ccae0e0d6205b8d4200f7ddc43",
-                "reference": "390393e97a6e42ccae0e0d6205b8d4200f7ddc43",
+                "url": "https://api.github.com/repos/chillerlan/php-qrcode/zipball/7b66282572fc14075c0507d74d9837dab25b38d6",
+                "reference": "7b66282572fc14075c0507d74d9837dab25b38d6",
                 "shasum": ""
             },
             "require": {
@@ -373,7 +403,7 @@
             "require-dev": {
                 "chillerlan/php-authenticator": "^4.3.1 || ^5.2.1",
                 "ext-fileinfo": "*",
-                "phan/phan": "^5.5.1",
+                "phan/phan": "^5.5.2",
                 "phpcompatibility/php-compatibility": "10.x-dev",
                 "phpmd/phpmd": "^2.15",
                 "phpunit/phpunit": "^9.6",
@@ -442,7 +472,7 @@
                     "type": "Ko-Fi"
                 }
             ],
-            "time": "2025-09-19T17:30:27+00:00"
+            "time": "2025-11-23T23:51:44+00:00"
         },
         {
             "name": "chillerlan/php-settings-container",
@@ -2836,6 +2866,35 @@
             "time": "2025-08-22T14:27:06+00:00"
         },
         {
+            "name": "he4rt/core",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/he4rt",
+                "reference": "777f9973b37d56b106f24b510a2c49689299f3d8"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "He4rt\\Core\\Providers\\He4rtServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "He4rt\\Core\\": "src/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
             "name": "internachi/modular",
             "version": "2.3.0",
             "source": {
@@ -5212,6 +5271,66 @@
                 }
             ],
             "time": "2025-09-03T16:03:54+00:00"
+        },
+        {
+            "name": "owenvoke/blade-fontawesome",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/owenvoke/blade-fontawesome.git",
+                "reference": "803da4c47c70dbac4f145ee50a66eefbbff3e8c1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/owenvoke/blade-fontawesome/zipball/803da4c47c70dbac4f145ee50a66eefbbff3e8c1",
+                "reference": "803da4c47c70dbac4f145ee50a66eefbbff3e8c1",
+                "shasum": ""
+            },
+            "require": {
+                "blade-ui-kit/blade-icons": "^1.8",
+                "illuminate/support": "^12.0",
+                "php": "^8.4"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.25",
+                "orchestra/testbench": "^10.6",
+                "pestphp/pest": "^4.1",
+                "phpstan/phpstan": "^2.1",
+                "symfony/var-dumper": "^7.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "OwenVoke\\BladeFontAwesome\\BladeFontAwesomeServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "OwenVoke\\BladeFontAwesome\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A package to easily make use of Font Awesome in your Laravel Blade views",
+            "support": {
+                "issues": "https://github.com/owenvoke/blade-fontawesome/issues",
+                "source": "https://github.com/owenvoke/blade-fontawesome/tree/v3.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://ecologi.com/owenvoke?gift-trees",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/owenvoke",
+                    "type": "github"
+                }
+            ],
+            "time": "2025-11-05T13:01:01+00:00"
         },
         {
             "name": "paragonie/constant_time_encoding",
@@ -10012,16 +10131,16 @@
         },
         {
             "name": "tpetry/laravel-postgresql-enhanced",
-            "version": "3.4.0",
+            "version": "3.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tpetry/laravel-postgresql-enhanced.git",
-                "reference": "3103e43e16c3ee9eb7fbeed842deff1597124379"
+                "reference": "a0634a8f90375a065377381df36b8f3d1c7c4b4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tpetry/laravel-postgresql-enhanced/zipball/3103e43e16c3ee9eb7fbeed842deff1597124379",
-                "reference": "3103e43e16c3ee9eb7fbeed842deff1597124379",
+                "url": "https://api.github.com/repos/tpetry/laravel-postgresql-enhanced/zipball/a0634a8f90375a065377381df36b8f3d1c7c4b4c",
+                "reference": "a0634a8f90375a065377381df36b8f3d1c7c4b4c",
                 "shasum": ""
             },
             "require": {
@@ -10036,7 +10155,7 @@
                 "friendsofphp/php-cs-fixer": "^2.19.3|^3.5.0",
                 "larastan/larastan": "^1.0|^2.1|^3.0",
                 "nesbot/carbon": "^2.7|^3.3",
-                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.0|^10.0",
+                "orchestra/testbench": "^4.0|^5.0|^6.0|^7.0|^8.0|^9.15.0|^10.0",
                 "phpstan/extension-installer": "^1.1",
                 "phpstan/phpstan": "^1.5|^2.0",
                 "phpunit/phpunit": "^8.5.23|^9.5.13|^10.5|^11.4",
@@ -10078,9 +10197,9 @@
             ],
             "support": {
                 "issues": "https://github.com/tpetry/laravel-postgresql-enhanced/issues",
-                "source": "https://github.com/tpetry/laravel-postgresql-enhanced/tree/3.4.0"
+                "source": "https://github.com/tpetry/laravel-postgresql-enhanced/tree/3.5.0"
             },
-            "time": "2025-10-17T09:24:08+00:00"
+            "time": "2025-11-24T10:21:44+00:00"
         },
         {
             "name": "ueberdosis/tiptap-php",
