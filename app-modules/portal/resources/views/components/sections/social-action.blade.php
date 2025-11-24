@@ -1,11 +1,11 @@
 <section class="hp-section relative" id="social-action">
     <div
-        class="absolute bottom-30 left-0 z-1 flex origin-top rotate-90 justify-start sm:-translate-x-[20%] sm:translate-y-32 lg:-translate-x-[5%] lg:translate-y-24 lg:rotate-0"
+        class="absolute bottom-0 left-0 z-1 flex origin-top rotate-90 justify-start sm:-translate-x-[20%] sm:translate-y-32 lg:-translate-x-[5%] lg:translate-y-24 lg:rotate-0"
     >
         <img
             src="{{ asset('images/3pontos/logo-chain.png') }}"
             alt=""
-            class="hidden h-auto w-full object-contain sm:block sm:max-w-[80%]"
+            class="hidden h-auto w-full object-contain sm:block sm:max-w-[60%]"
         />
     </div>
 
