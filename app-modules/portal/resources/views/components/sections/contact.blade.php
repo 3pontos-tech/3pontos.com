@@ -34,7 +34,7 @@
             </div>
 
             <div
-                class="order-1 grid h-full grid-cols-1 content-between gap-12 py-2 sm:grid-cols-2 lg:order-2 lg:grid-cols-1"
+                class="order-1 grid h-full grid-cols-1 content-between gap-12 py-2 sm:grid-cols-2 lg:order-2 lg:grid-cols-1 lg:py-4"
             >
                 <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
                     <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
