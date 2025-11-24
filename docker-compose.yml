@@ -1,0 +1,76 @@
+services:
+  3pontos-db:
+    build:
+      dockerfile: docker/postgres.Dockerfile
+      context: .
+    image: postgres.local:18
+    container_name: 3pontos-db
+    restart: no
+    hostname: dev
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: dev_3pontos
+    ports:
+      - '5432:5432'
+    volumes:
+      - 3pontos-db:/var/lib/postgresql/data
+    networks:
+      - dev-3pontos
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready --quiet --username=postgres --dbname=postgres || exit 1']
+      interval: 10s
+      retries: 5
+      timeout: 10s
+      start_period: 15s
+
+  3pontos-redis:
+    build:
+      dockerfile: docker/redis.Dockerfile
+      context: .
+    image: redis.local:8
+    container_name: 3pontos-redis
+    restart: no
+    hostname: dev
+    ports:
+      - '6379:6379'
+    networks:
+      - dev-3pontos
+    healthcheck:
+      test: ['CMD-SHELL', 'redis-cli --raw incr ping || exit 1']
+      interval: 10s
+      retries: 5
+      timeout: 10s
+      start_period: 15s
+
+  3pontos-mailpit:
+    build:
+      dockerfile: docker/mailpit.Dockerfile
+      context: .
+    image: mailpit.local:1
+    container_name: 3pontos-mailpit
+    restart: no
+    hostname: dev
+    ports:
+      - '1025:1025'
+      - '8025:8025'
+    networks:
+      - dev-3pontos
+    healthcheck:
+      test: ['CMD', '/mailpit', 'readyz']
+      interval: 10s
+      retries: 5
+      timeout: 10s
+      start_period: 10s
+
+volumes:
+  3pontos-db:
+    name: 3pontos-db
+
+networks:
+  dev-3pontos:
+    name: dev-3pontos
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: dev-3pontos
+      com.docker.network.bridge.host_binding_ipv4: '127.0.0.1'
