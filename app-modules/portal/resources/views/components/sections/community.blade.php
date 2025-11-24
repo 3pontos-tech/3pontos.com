@@ -1,5 +1,5 @@
 <section class="hp-section" id="community">
-    <div class="hp-container grid grid-cols-1 items-start gap-x-12 lg:grid-cols-[1fr_5fr]">
+    <div class="hp-container grid grid-cols-1 content-start items-start gap-x-12 lg:grid-cols-[1fr_5fr]">
         <div
             x-data="{ visible: false }"
             x-intersect.once="visible = true"
@@ -11,7 +11,7 @@
         </div>
 
         <div class="flex flex-col gap-8">
-            <x-he4rt::headline>
+            <x-he4rt::headline class="mx-0">
                 <x-slot:title>Comunidade 3 Pontos: Seu hub de tecnologia</x-slot>
                 <x-slot:description>
                     Onde o networking é real, o aprendizado é contínuo e os desafios são inspiradores. Junte-se a

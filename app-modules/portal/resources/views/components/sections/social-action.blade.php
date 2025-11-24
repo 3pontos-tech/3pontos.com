@@ -21,8 +21,8 @@
         </div>
 
         <div class="flex flex-col gap-8">
-            <div>
-                <x-he4rt::headline>
+            <div class="flex items-start">
+                <x-he4rt::headline class="mx-0">
                     <x-slot:title>Nossos Números falam por Nós</x-slot>
                     <x-slot:description>
                         Cada número reflete nosso impacto real: a união entre inovação, talentos e negócios que aceleram

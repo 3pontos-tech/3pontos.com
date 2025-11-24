@@ -3,7 +3,7 @@
         <img src="{{ asset('images/3pontos/big-wave.svg') }}" alt="" class="h-full w-full object-cover" />
     </div>
 
-    <div class="hp-container relative z-10 grid grid-cols-1 items-start gap-x-12 lg:grid-cols-[1fr_5fr]">
+    <div class="hp-container relative z-10 grid grid-cols-1 content-start items-start gap-x-12 lg:grid-cols-[1fr_5fr]">
         <div
             x-data="{ visible: false }"
             x-intersect.once="visible = true"
@@ -15,8 +15,8 @@
         </div>
 
         <div class="flex flex-col gap-8">
-            <div>
-                <x-he4rt::headline>
+            <div class="flex items-start">
+                <x-he4rt::headline class="mx-0">
                     <x-slot:title>Nossos pilares</x-slot>
                     <x-slot:description>
                         A 3 Pontos conecta empresas e startups inovadoras a talentos excepcionais, acelerando soluções
