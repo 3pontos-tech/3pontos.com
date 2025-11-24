@@ -13,9 +13,9 @@
 
 <div {{ $attributes->class('hp-input-field') }}>
     @if ($label)
-        <label for="{{ $inputId }}" class="hp-input-label">
+        <x-he4rt::heading size="3xs" for="{{ $inputId }}" class="hp-input-label">
             {{ $label }}
-        </label>
+        </x-he4rt::heading>
     @endif
 
     <textarea
