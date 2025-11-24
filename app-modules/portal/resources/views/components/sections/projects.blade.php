@@ -11,7 +11,7 @@
             </div>
         </div>
 
-        <div class="flex h-full min-h-0 flex-col items-start gap-4">
+        <div class="flex h-full min-h-0 flex-col gap-4 lg:items-start">
             <div>
                 <x-he4rt::headline size="sm">
                     <x-slot:badge>
