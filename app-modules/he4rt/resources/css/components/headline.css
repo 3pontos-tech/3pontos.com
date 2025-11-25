@@ -47,11 +47,11 @@
 }
 
 .hp-headline-size-xl .hp-headline-title {
-    @apply text-2xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-5xl;
+    @apply text-3xl sm:text-5xl;
 }
 
 .hp-headline-size-2xl .hp-headline-title {
-    @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl;
+    @apply text-4xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl;
 }
 
 .hp-headline-size-3xl .hp-headline-title {
@@ -63,7 +63,7 @@
 }
 
 .hp-headline-size-2xl .hp-headline-description {
-    @apply text-text-medium max-w-full text-base font-medium delay-200 md:text-lg lg:text-lg;
+    @apply text-text-medium max-w-full text-base font-medium delay-200;
 }
 
 .hp-headline-highlight {

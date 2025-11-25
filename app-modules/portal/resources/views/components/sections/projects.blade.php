@@ -19,7 +19,7 @@
 
         <div class="flex h-full min-h-0 flex-col gap-4 lg:items-start">
             <div>
-                <x-he4rt::headline size="sm">
+                <x-he4rt::headline>
                     <x-slot:badge>
                         <x-he4rt::section-title size="sm">Projetos</x-he4rt::section-title>
                     </x-slot>

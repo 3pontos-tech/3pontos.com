@@ -1,7 +1,7 @@
 @props([
     "as" => "div",
     "align" => "left",
-    "size" => "lg",
+    "size" => "xl",
     "animation" => "fade-up",
     "keywords" => [],
 ])
