@@ -39,11 +39,10 @@
 
     $anim = $definitions[$type];
 
-    $enterClass = 'transition-all ease-in';
-    $enterClass .= ' duration-' . $duration;
+    $transitionClass = 'transition-all ease-in-out duration-' . $duration;
 
     if ($delay) {
-        $enterClass .= ' delay-' . $delay;
+        $transitionClass .= ' delay-' . $delay;
     }
 @endphp
 
@@ -51,9 +50,12 @@
     <div x-data="{ visible: false }" x-intersect.once.threshold.20="visible = true" {{ $attributes }}>
         <div
             x-show="visible"
-            x-transition:enter="{{ $enterClass }}"
+            x-transition:enter="{{ $transitionClass }}"
             x-transition:enter-start="{{ $anim['start'] }}"
             x-transition:enter-end="{{ $anim['end'] }}"
+            x-transition:leave="{{ $transitionClass }}"
+            x-transition:leave-start="{{ $anim['end'] }}"
+            x-transition:leave-end="{{ $anim['start'] }}"
             x-cloak
         >
             {{ $slot }}
@@ -62,9 +64,12 @@
 @else
     <div
         x-show="visible"
-        x-transition:enter="{{ $enterClass }}"
+        x-transition:enter="{{ $transitionClass }}"
         x-transition:enter-start="{{ $anim['start'] }}"
         x-transition:enter-end="{{ $anim['end'] }}"
+        x-transition:leave="{{ $transitionClass }}"
+        x-transition:leave-start="{{ $anim['end'] }}"
+        x-transition:leave-end="{{ $anim['start'] }}"
         x-cloak
         {{ $attributes }}
     >
