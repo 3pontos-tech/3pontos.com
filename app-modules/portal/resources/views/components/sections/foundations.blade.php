@@ -38,7 +38,7 @@
                         <x-he4rt::icon size="sm" class="rounded-sm" />
                         <x-he4rt::heading size="2xs">Soluções Estratégicas para Seu Crescimento</x-he4rt::heading>
                     </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
+                    <x-slot:description class="leading-[1.5]">
                         Sua empresa tem uma visão clara, mas enfrenta desafios tecnológicos. Aqui na 3 Pontos,
                         desenvolvemos e implementamos soluções de ponta que transformam essas barreiras em
                         oportunidades. Do desenvolvimento customizado ao marketing digital estratégico, nós somos o
@@ -51,7 +51,7 @@
                         <x-he4rt::icon size="sm" class="rounded-sm" />
                         <x-he4rt::heading size="2xs">Soluções Estratégicas para Seu Crescimento</x-he4rt::heading>
                     </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
+                    <x-slot:description class="leading-[1.5]">
                         Sua empresa tem uma visão clara, mas enfrenta desafios tecnológicos. Aqui na 3 Pontos,
                         desenvolvemos e implementamos soluções de ponta que transformam essas barreiras em
                         oportunidades. Do desenvolvimento customizado ao marketing digital estratégico, nós somos o
@@ -64,7 +64,7 @@
                         <x-he4rt::icon size="sm" class="rounded-sm" />
                         <x-he4rt::heading size="2xs">Soluções Estratégicas para Seu Crescimento</x-he4rt::heading>
                     </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
+                    <x-slot:description class="leading-[1.5]">
                         Sua empresa tem uma visão clara, mas enfrenta desafios tecnológicos. Aqui na 3 Pontos,
                         desenvolvemos e implementamos soluções de ponta que transformam essas barreiras em
                         oportunidades. Do desenvolvimento customizado ao marketing digital estratégico, nós somos o

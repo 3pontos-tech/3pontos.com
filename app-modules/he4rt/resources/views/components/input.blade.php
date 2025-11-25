@@ -13,7 +13,7 @@
 
 <div {{ $attributes->class('hp-input-field') }}>
     @if ($label)
-        <x-he4rt::heading size="3xs" for="{{ $inputId }}">
+        <x-he4rt::heading size="2xs" for="{{ $inputId }}">
             {{ $label }}
         </x-he4rt::heading>
     @endif

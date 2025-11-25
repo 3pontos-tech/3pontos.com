@@ -65,8 +65,8 @@
                         <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
                             <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
                                 <x-he4rt::icon :icon="$item['icon']" class="bg-elevation-02dp" />
-                                <div class="flex flex-1 flex-col gap-1">
-                                    <x-he4rt::text size="sm" class="font-medium">
+                                <div class="flex flex-1 flex-col gap-0.5">
+                                    <x-he4rt::text class="font-medium">
                                         {{ $item['label'] }}
                                     </x-he4rt::text>
                                     <x-he4rt::text class="text-text-high font-bold">
@@ -83,7 +83,7 @@
                         <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
                             <x-he4rt::icon icon="heroicon-o-arrow-path" class="bg-elevation-02dp" />
                             <div class="flex flex-1 flex-col gap-1">
-                                <x-he4rt::text size="sm" class="font-medium">Siga nas redes sociais</x-he4rt::text>
+                                <x-he4rt::text class="font-medium">Siga nas redes sociais</x-he4rt::text>
                                 <div class="flex gap-6">
                                     @foreach ($socials as $socialIcon)
                                         <x-he4rt::icon :icon="$socialIcon" class="border-none bg-transparent p-0" />
