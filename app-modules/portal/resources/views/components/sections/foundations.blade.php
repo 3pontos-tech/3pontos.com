@@ -54,7 +54,7 @@
                             </x-he4rt::heading>
                         </x-slot>
                         <x-slot:description class="leading-[1.5]">
-                            Se você é apaixonado por inovação e performance aqui é seu lugar. Nossa comunidade no
+                            Se você é apaixonado por inovação e performance, aqui é seu lugar. Nossa comunidade no
                             Discord é vibrante, colaborativa e repleta de oportunidades. Conecte-se com outros
                             profissionais, aprenda com os melhores, participe de eventos transformadores que resolvem
                             problemas reais e encontre projetos que desafiam suas habilidades. Seu trabalho merece estar

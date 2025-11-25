@@ -42,7 +42,7 @@
                     </x-slot>
                     <x-slot:description class="leading-[1.5]">
                         Uma plataforma de investimentos intuitiva e acessível, focada em democratizar o acesso ao
-                        mercado financeiro. Com uma interface amigável e integração segura com APIs. Ela torna o
+                        mercado financeiro. Com uma interface amigável e integração segura com APIs, ela torna o
                         processo de investimento simples e seguro para todos.
                     </x-slot>
                 </x-he4rt::card>

@@ -53,7 +53,7 @@
                         <a rel="noopener noreferrer" target="_blank" href="https://firece.com.br/" class="group block">
                             <img
                                 src="{{ asset('images/3pontos/partners/firece-logo.webp') }}"
-                                alt="firece"
+                                alt="firece logo"
                                 loading="lazy"
                                 class="h-5 w-auto grayscale transition duration-300 group-hover:grayscale-0"
                             />
@@ -68,7 +68,7 @@
                         >
                             <img
                                 src="{{ asset('images/3pontos/partners/flamma-logo.webp') }}"
-                                alt="flamma"
+                                alt="flamma logo"
                                 loading="lazy"
                                 class="h-5 w-auto grayscale transition duration-300 group-hover:grayscale-0"
                             />
@@ -83,7 +83,7 @@
                         >
                             <img
                                 src="{{ asset('images/3pontos/partners/ipe-logo.webp') }}"
-                                alt="ipê capital"
+                                alt="ipê capital logo"
                                 loading="lazy"
                                 class="h-5 w-auto grayscale transition duration-300 group-hover:grayscale-0"
                             />
@@ -99,7 +99,7 @@
                     <img
                         src="{{ asset('images/brasil-flag.webp') }}"
                         loading="lazy"
-                        alt="Brasil"
+                        alt="Brazil phone number"
                         class="h-4 w-6 rounded-sm object-contain sm:h-5 sm:w-7"
                     />
                     <x-he4rt::text class="font-semibold" size="sm">(11) 98720-1303</x-he4rt::text>
