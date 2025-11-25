@@ -50,18 +50,33 @@
                 <x-he4rt::heading size="2xs" :level="2" class="mb-3 sm:mb-6">Nossos projetos</x-he4rt::heading>
                 <ul class="text-text-medium space-y-2 text-sm sm:space-y-4">
                     <li>
-                        <a target="_blank" href="https://firece.com.br/" class="hover:text-secondary transition">
-                            Fire|ce
+                        <a target="_blank" href="https://firece.com.br/" class="group block">
+                            <img
+                                src="{{ asset('images/3pontos/partners/firece-logo.webp') }}"
+                                alt="firece"
+                                loading="lazy"
+                                class="h-5 w-auto grayscale transition duration-300 group-hover:grayscale-0"
+                            />
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://flamma.3pontos.work/" class="hover:text-secondary transition">
-                            Flamma
+                        <a target="_blank" href="https://flamma.3pontos.work/" class="group block">
+                            <img
+                                src="{{ asset('images/3pontos/partners/flamma-logo.webp') }}"
+                                alt="flamma"
+                                loading="lazy"
+                                class="h-5 w-auto grayscale transition duration-300 group-hover:grayscale-0"
+                            />
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://ipecapitalbr.com/" class="hover:text-secondary transition">
-                            Ipê Capital
+                        <a target="_blank" href="https://ipecapitalbr.com/" class="group block">
+                            <img
+                                src="{{ asset('images/3pontos/partners/ipe-logo.webp') }}"
+                                alt="ipê capital"
+                                loading="lazy"
+                                class="h-5 w-auto grayscale transition duration-300 group-hover:grayscale-0"
+                            />
                         </a>
                     </li>
                 </ul>
