@@ -67,22 +67,22 @@ final class GuestPanelProvider extends PanelProvider
                     ->sort(0),
                 NavigationItem::make('Nossos pilares')
                     ->url('#foundations')
-                    ->sort(2),
+                    ->sort(1),
                 NavigationItem::make('Missão social')
                     ->url('#social-action')
-                    ->sort(3),
+                    ->sort(2),
                 NavigationItem::make('Projects')
                     ->url('#projects')
-                    ->sort(4),
+                    ->sort(3),
                 NavigationItem::make('Comunidade')
                     ->url('#community')
-                    ->sort(5),
+                    ->sort(4),
                 NavigationItem::make('Eventos')
                     ->url('#events')
-                    ->sort(6),
+                    ->sort(5),
                 NavigationItem::make('Contato')
                     ->url('#contact')
-                    ->sort(7),
+                    ->sort(6),
             ])
             ->viteTheme('app-modules/he4rt/resources/css/themes/3pontos/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
