@@ -35,9 +35,10 @@
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
             <div class="order-first lg:col-span-2">
                 <x-he4rt::headline class="mx-0">
-                    <x-slot:title>Entre em contato conosco</x-slot>
+                    <x-slot:title>Fale conosco</x-slot>
                     <x-slot:description>
-                        Histórias reais de desenvolvedores que transformaram suas carreiras através da nossa comunidade.
+                        Estamos prontos para acelerar seu negócio ou te receber em nossa comunidade. Escolha a forma de
+                        contato que funciona melhor para você.
                     </x-slot>
                 </x-he4rt::headline>
             </div>
