@@ -47,7 +47,7 @@ class PortalPage extends Dashboard
     protected function registerMetaTags(): void
     {
         FilamentView::registerRenderHook(
-            PanelsRenderHook::HEAD_END,
+            PanelsRenderHook::HEAD_START,
             fn (): string => Blade::render('components.metatags', [
                 'url' => $this->url,
                 'title' => $this->getTitle(),
