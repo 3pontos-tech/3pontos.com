@@ -1,5 +1,5 @@
 <section
-    class="hp-section bg-elevation-01dp border-outline-dark relative min-h-0 overflow-hidden border-t border-b"
+    class="hp-section bg-elevation-01dp border-outline-dark relative min-h-0 scroll-mt-30 overflow-hidden border-t border-b"
     id="events"
 >
     <div class="absolute right-0 bottom-0 z-1 h-1/2 w-1/2 translate-x-1/2 lg:-translate-y-[110%]">

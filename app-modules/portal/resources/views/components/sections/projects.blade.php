@@ -1,5 +1,5 @@
 <section
-    class="hp-section bg-elevation-01dp/86 border-outline-dark relative max-h-[80vh] min-h-[80vh] overflow-hidden border-t border-b backdrop-blur-md"
+    class="hp-section bg-elevation-01dp/86 border-outline-dark relative max-h-[80vh] min-h-[80vh] scroll-mt-30 overflow-hidden border-t border-b backdrop-blur-md"
     id="projects"
 >
     <div
