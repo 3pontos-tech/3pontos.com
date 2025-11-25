@@ -24,7 +24,7 @@
                     e a sociedade. Um lugar para mostrar seu potencial e fazer parte de algo com propósito.
                 </x-slot>
                 <x-slot:actions>
-                    <x-he4rt::button>Entre em contato</x-he4rt::button>
+                    <x-he4rt::button href="#contact">Entre em contato</x-he4rt::button>
                 </x-slot>
             </x-he4rt::headline>
         </div>
