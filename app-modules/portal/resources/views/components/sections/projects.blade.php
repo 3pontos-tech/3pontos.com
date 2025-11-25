@@ -21,7 +21,7 @@
             <div>
                 <x-he4rt::headline>
                     <x-slot:badge>
-                        <x-he4rt::section-title size="sm">Projetos</x-he4rt::section-title>
+                        <x-he4rt::section-title>Projetos</x-he4rt::section-title>
                     </x-slot>
                     <x-slot:title>Aonde a Disrupção acontece</x-slot>
                     <x-slot:description>

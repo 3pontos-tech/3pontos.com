@@ -10,7 +10,7 @@
         <div>
             <x-he4rt::headline :keywords="['3', 'Pontos']">
                 <x-slot:badge>
-                    <x-he4rt::section-title>Eventos</x-he4rt::section-title>
+                    <x-he4rt::section-title size="lg">Eventos</x-he4rt::section-title>
                 </x-slot>
                 <x-slot:title>O Próximo Nível de Colaboração.</x-slot>
                 <x-slot:description>
