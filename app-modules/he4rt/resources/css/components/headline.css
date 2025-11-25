@@ -15,7 +15,7 @@
 }
 
 .hp-headline-content {
-    @apply flex flex-col gap-6;
+    @apply flex flex-col gap-2;
 }
 
 .hp-headline-title {

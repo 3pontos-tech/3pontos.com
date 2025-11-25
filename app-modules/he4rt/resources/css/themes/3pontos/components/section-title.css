@@ -2,6 +2,10 @@
     @apply text-text-medium relative mt-3 flex w-fit bg-transparent font-semibold;
 }
 
+.hp-section-title.hp-section-title-size-sm {
+    @apply text-sm;
+}
+
 .hp-section-title.hp-section-title-size-lg {
     @apply text-sm sm:text-lg lg:text-xl;
 }

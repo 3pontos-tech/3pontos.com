@@ -1,74 +1,82 @@
-<section class="hp-section" id="contact">
-    <div class="hp-container">
-        <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
-            <div class="border-outline-low flex flex-1 flex-col gap-8 rounded-lg border p-8">
-                <x-he4rt::headline size="md">
+<section class="hp-section relative z-10" id="contact">
+    <div class="hp-container grid grid-cols-1 items-start gap-x-12 lg:grid-cols-[1fr_5fr]">
+        <div
+            x-data="{ visible: false }"
+            x-intersect.once="visible = true"
+            class="mb-4 flex items-center justify-center sm:justify-start"
+        >
+            <x-he4rt::animate-block duration="700">
+                <x-he4rt::section-title size="lg">Contato</x-he4rt::section-title>
+            </x-he4rt::animate-block>
+        </div>
+
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.5fr_1fr] lg:gap-20">
+            <div class="order-first lg:col-span-2">
+                <x-he4rt::headline class="mx-0" size="md">
                     <x-slot:title>Entre em contato conosco</x-slot>
                     <x-slot:description>
                         Histórias reais de desenvolvedores que transformaram suas carreiras através da nossa comunidade.
                     </x-slot>
                 </x-he4rt::headline>
+            </div>
 
-                <hr class="border-outline-low" />
-
-                <x-he4rt::input label="Nome completo" />
+            <div
+                class="bg-elevation-surface/20 border-outline-dark order-2 flex flex-1 flex-col gap-8 rounded-lg border p-4 lg:order-1 lg:p-6"
+            >
+                <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                    <x-he4rt::input label="Nome completo" />
+                    <x-he4rt::input label="Email" />
+                </div>
                 <x-he4rt::input label="Email" />
                 <x-he4rt::textarea label="Mensagem" />
 
                 <x-he4rt::button>Enviar mensagem</x-he4rt::button>
             </div>
 
-            <div class="flex h-full flex-col gap-8">
-                <div class="flex h-full flex-col gap-16">
-                    <div class="relative flex flex-1 flex-col items-center justify-center">
-                        <div class="absolute flex h-full w-full">
-                            <img
-                                src="{{ asset('images/contact-image.svg') }}"
-                                alt="contact-image"
-                                class="h-full w-full object-cover"
-                            />
+            <div
+                class="order-1 grid h-full grid-cols-1 content-between gap-12 py-2 sm:grid-cols-2 lg:order-2 lg:grid-cols-1 lg:py-4"
+            >
+                <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
+                    <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
+                        <x-he4rt::icon icon="heroicon-o-phone" class="bg-elevation-02dp" />
+                        <div class="flex flex-1 flex-col gap-1">
+                            <x-he4rt::text size="sm" class="font-medium">Telefone</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold">+55 90000-0000</x-he4rt::text>
                         </div>
-                        <x-he4rt::headline align="center" size="md">
-                            <x-slot:title>Venha fazer parte do nosso discord</x-slot>
-                            <x-slot:description>
-                                Histórias reais de desenvolvedores que transformaram suas carreiras através da nossa
-                                comunidade.
-                            </x-slot>
-                            <x-slot:actions>
-                                <x-he4rt::button>Entrar no Discord</x-he4rt::button>
-                            </x-slot>
-                        </x-he4rt::headline>
-                    </div>
+                    </x-slot>
+                </x-he4rt::card>
 
-                    <div class="border-outline-low flex flex-col gap-4 rounded-lg border p-8">
-                        <x-he4rt::headline class="mx-0" size="sm">
-                            <x-slot:title>Redes sociais</x-slot>
-                            <x-slot:description>Lorem ipsum dolor sit amet, consectetur</x-slot>
-                            <x-slot:actions>
-                                <x-filament::icon
-                                    icon="fab-discord"
-                                    class="h-6 w-6 transition-all duration-500 hover:scale-105"
-                                />
-                                <x-filament::icon
-                                    icon="fab-linkedin"
-                                    class="h-6 w-6 transition-all duration-500 hover:scale-105"
-                                />
-                                <x-filament::icon
-                                    icon="fab-x-twitter"
-                                    class="h-6 w-6 transition-all duration-500 hover:scale-105"
-                                />
-                                <x-filament::icon
-                                    icon="fab-instagram"
-                                    class="h-6 w-6 transition-all duration-500 hover:scale-105"
-                                />
-                                <x-filament::icon
-                                    icon="fab-github"
-                                    class="h-6 w-6 transition-all duration-500 hover:scale-105"
-                                />
-                            </x-slot>
-                        </x-he4rt::headline>
-                    </div>
-                </div>
+                <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
+                    <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
+                        <x-he4rt::icon icon="heroicon-o-envelope" class="bg-elevation-02dp" />
+                        <div class="flex flex-1 flex-col gap-1">
+                            <x-he4rt::text size="sm" class="font-medium">Email</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold">email@example.com</x-he4rt::text>
+                        </div>
+                    </x-slot>
+                </x-he4rt::card>
+
+                <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
+                    <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
+                        <x-he4rt::icon icon="heroicon-o-map-pin" class="bg-elevation-02dp" />
+                        <div class="flex flex-1 flex-col gap-1">
+                            <x-he4rt::text size="sm" class="font-medium">Endereço</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold">
+                                Av. Dr. Cardoso de Melo - Vila Olímpia - São Paulo
+                            </x-he4rt::text>
+                        </div>
+                    </x-slot>
+                </x-he4rt::card>
+
+                <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
+                    <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
+                        <x-he4rt::icon icon="heroicon-o-arrow-path" class="bg-elevation-02dp" />
+                        <div class="flex flex-1 flex-col gap-1">
+                            <x-he4rt::text size="sm" class="font-medium">Siga nas redes sociais</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold"></x-he4rt::text>
+                        </div>
+                    </x-slot>
+                </x-he4rt::card>
             </div>
         </div>
     </div>

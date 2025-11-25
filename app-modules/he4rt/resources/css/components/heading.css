@@ -3,8 +3,12 @@
     @apply break-words;
 }
 
+.hp-heading-size-3xs {
+    @apply text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm;
+}
+
 .hp-heading-size-2xs {
-    @apply text-base sm:text-base md:text-base lg:text-base xl:text-base;
+    @apply text-sm sm:text-base md:text-base lg:text-base xl:text-base;
 }
 
 .hp-heading-size-xs {

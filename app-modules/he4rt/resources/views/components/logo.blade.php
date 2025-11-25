@@ -1,6 +1,6 @@
 @props([
     'href' => '/',
-    'path' => 'images/logo.svg',
+    'path' => 'images/3pontos/logo.svg',
     'size' => 'md',
 ])
 

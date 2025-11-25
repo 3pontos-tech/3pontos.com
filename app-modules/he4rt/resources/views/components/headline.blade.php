@@ -62,7 +62,7 @@
             </div>
         @endisset
 
-        <div class="hp-headline-content space-y-4">
+        <div class="hp-headline-content">
             @isset($title)
                 <h1
                     {{ $title->attributes->class(["hp-headline-title", "delay-100" => $animate]) }}

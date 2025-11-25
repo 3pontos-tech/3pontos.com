@@ -1,5 +1,5 @@
 .hp-icon {
-    @apply bg-icon-high text-icon-dark rounded-md p-2;
+    @apply border-outline-dark text-icon-light rounded-md border bg-transparent p-3;
 }
 
 .hp-icon-interactive {
@@ -7,7 +7,7 @@
 }
 
 .hp-icon-size-sm {
-    @apply h-4 w-4;
+    @apply !h-4 !w-4;
 }
 
 .hp-icon-size-md {
