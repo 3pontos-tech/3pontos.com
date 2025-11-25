@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-span-1">
-                <x-he4rt::heading size="2xs" :level="2" class="mb-3 sm:mb-6">Links</x-he4rt::heading>
+                <x-he4rt::heading size="2xs" :level="3" class="mb-3 sm:mb-6">Links</x-he4rt::heading>
                 <ul class="text-text-medium space-y-2 text-sm sm:space-y-4">
                     <li>
                         <a href="#hero" class="hover:text-secondary transition">Home</a>
@@ -47,10 +47,10 @@
             </div>
 
             <div class="col-span-1">
-                <x-he4rt::heading size="2xs" :level="2" class="mb-3 sm:mb-6">Nossos projetos</x-he4rt::heading>
+                <x-he4rt::heading size="2xs" :level="3" class="mb-3 sm:mb-6">Nossos projetos</x-he4rt::heading>
                 <ul class="text-text-medium space-y-2 text-sm sm:space-y-4">
                     <li>
-                        <a target="_blank" href="https://firece.com.br/" class="group block">
+                        <a rel="noopener noreferrer" target="_blank" href="https://firece.com.br/" class="group block">
                             <img
                                 src="{{ asset('images/3pontos/partners/firece-logo.webp') }}"
                                 alt="firece"
@@ -60,7 +60,12 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://flamma.3pontos.work/" class="group block">
+                        <a
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://flamma.3pontos.work/"
+                            class="group block"
+                        >
                             <img
                                 src="{{ asset('images/3pontos/partners/flamma-logo.webp') }}"
                                 alt="flamma"
@@ -70,7 +75,12 @@
                         </a>
                     </li>
                     <li>
-                        <a target="_blank" href="https://ipecapitalbr.com/" class="group block">
+                        <a
+                            rel="noopener noreferrer"
+                            target="_blank"
+                            href="https://ipecapitalbr.com/"
+                            class="group block"
+                        >
                             <img
                                 src="{{ asset('images/3pontos/partners/ipe-logo.webp') }}"
                                 alt="ipê capital"
@@ -83,7 +93,7 @@
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4">
-                <x-he4rt::heading :level="2" size="2xs">Contato e endereço</x-he4rt::heading>
+                <x-he4rt::heading :level="3" size="2xs">Contato e endereço</x-he4rt::heading>
                 <x-he4rt::text class="font-semibold" size="sm">contato@firece.com.br</x-he4rt::text>
                 <div class="flex items-center gap-2">
                     <img
@@ -97,7 +107,7 @@
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4 xl:col-span-2">
-                <x-he4rt::heading :level="2" size="2xs">Nossa Newsletter</x-he4rt::heading>
+                <x-he4rt::heading :level="3" size="2xs">Nossa Newsletter</x-he4rt::heading>
                 <x-he4rt::text size="sm">
                     Envie nos o seu email e receba as melhores notícias e textos sobre o que acontece no mercado
                     financeiro
