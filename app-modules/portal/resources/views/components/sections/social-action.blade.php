@@ -29,16 +29,13 @@
                         Cada número reflete nosso impacto real: a união entre inovação, talentos e negócios que aceleram
                         o crescimento e criam conexões com propósito
                     </x-slot>
-                    <x-slot:actions>
-                        <x-he4rt::button>Button</x-he4rt::button>
-                    </x-slot>
                 </x-he4rt::headline>
             </div>
 
             <div
                 x-data="{ visible: false }"
                 x-intersect.threshold.20.once="visible = true"
-                class="grid grid-cols-1 gap-8 lg:grid-cols-3"
+                class="grid grid-cols-1 gap-8 sm:mt-12 lg:grid-cols-3"
             >
                 <x-he4rt::animate-block>
                     <x-he4rt::card>

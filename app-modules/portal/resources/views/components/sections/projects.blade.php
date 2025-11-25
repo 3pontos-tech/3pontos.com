@@ -1,6 +1,6 @@
 <section
     class="hp-section bg-elevation-01dp/86 border-outline-dark relative max-h-[80vh] min-h-[80vh] overflow-hidden border-t border-b backdrop-blur-md"
-    id="about"
+    id="projects"
 >
     <div
         class="hp-container relative z-10 grid h-full grid-cols-1 gap-x-12 py-8 md:py-8 lg:grid-cols-[1fr_2fr] lg:py-10 xl:py-16"
@@ -68,19 +68,6 @@
                         serviço digital e ágil que oferece avaliação e diagnóstico financeiro detalhado. Utilizando um
                         algoritmo avançado de análise de dados, ele permite que os clientes recebam um parecer
                         financeiro completo em curto período de tempo.
-                    </x-slot>
-                </x-he4rt::card>
-
-                <x-he4rt::card class="h-fit gap-4">
-                    <x-slot:icon class="items-center gap-4">
-                        <x-he4rt::icon size="sm" class="rounded-sm" />
-                        <x-he4rt::heading size="2xs">Soluções Estratégicas para Seu Crescimento</x-he4rt::heading>
-                    </x-slot>
-                    <x-slot:description class="leading-[1.5]">
-                        Sua empresa tem uma visão clara, mas enfrenta desafios tecnológicos. Aqui na 3 Pontos,
-                        desenvolvemos e implementamos soluções de ponta que transformam essas barreiras em
-                        oportunidades. Do desenvolvimento customizado ao marketing digital estratégico, nós somos o
-                        parceiro que sua empresa precisa para escalar com confiança.
                     </x-slot>
                 </x-he4rt::card>
             </div>

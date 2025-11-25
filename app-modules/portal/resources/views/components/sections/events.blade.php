@@ -1,6 +1,6 @@
 <section
     class="hp-section bg-elevation-01dp border-outline-dark relative min-h-0 overflow-hidden border-t border-b"
-    id="about"
+    id="events"
 >
     <div class="absolute right-0 bottom-0 z-1 h-1/2 w-1/2 translate-x-1/2 lg:-translate-y-[110%]">
         <img
@@ -24,7 +24,7 @@
                     e a sociedade. Um lugar para mostrar seu potencial e fazer parte de algo com propósito.
                 </x-slot>
                 <x-slot:actions>
-                    <x-he4rt::button>Button</x-he4rt::button>
+                    <x-he4rt::button>Entre em contato</x-he4rt::button>
                 </x-slot>
             </x-he4rt::headline>
         </div>

@@ -1,13 +1,8 @@
 @php
     $contacts = [
         [
-            'label' => 'Telefone',
-            'value' => '+55 90000-0000',
-            'icon' => 'heroicon-o-phone',
-        ],
-        [
             'label' => 'Email',
-            'value' => 'email@example.com',
+            'value' => 'contato@3pontos.com',
             'icon' => 'heroicon-o-envelope',
         ],
         [
@@ -17,7 +12,20 @@
         ],
     ];
 
-    $socials = ['fab-instagram', 'fab-x-twitter', 'fab-linkedin'];
+    $socials = [
+        [
+            'icon' => 'fab-instagram',
+            'link' => 'https://www.instagram.com/3pontos.hub/',
+        ],
+        [
+            'icon' => 'fab-square-facebook',
+            'link' => 'https://www.facebook.com/profile.php?id=61582825820628',
+        ],
+        [
+            'icon' => 'fab-x-twitter',
+            'link' => 'https://x.com/3Pontoshub',
+        ],
+    ];
 @endphp
 
 <section class="hp-section relative z-10" id="contact">
@@ -86,8 +94,13 @@
                             <div class="flex flex-1 flex-col gap-1">
                                 <x-he4rt::text class="font-medium">Siga nas redes sociais</x-he4rt::text>
                                 <div class="flex gap-6">
-                                    @foreach ($socials as $socialIcon)
-                                        <x-he4rt::icon :icon="$socialIcon" class="border-none bg-transparent p-0" />
+                                    @foreach ($socials as $social)
+                                        <x-he4rt::icon
+                                            target="_blank"
+                                            :href="$social['link']"
+                                            :icon="$social['icon']"
+                                            class="border-none bg-transparent p-0"
+                                        />
                                     @endforeach
                                 </div>
                             </div>

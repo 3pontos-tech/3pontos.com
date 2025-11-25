@@ -30,11 +30,10 @@
                     </x-slot>
 
                     <x-slot:description>
-                        Somos o ecossistema que une solução e conhecimento em um único lugar Aceleramos sua empresa.
-                        Fortalecemos sua carreira.
+                        Somos o ecossistema que une solução e conhecimento em um único lugar.
                     </x-slot>
                     <x-slot:actions>
-                        <x-he4rt::button>Button</x-he4rt::button>
+                        <x-he4rt::button href="#contact">Entre em contato</x-he4rt::button>
                     </x-slot>
                 </x-he4rt::headline>
             </div>
