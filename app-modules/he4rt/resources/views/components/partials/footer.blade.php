@@ -20,7 +20,7 @@
             </div>
 
             <div class="col-span-1">
-                <x-he4rt::heading size="2xs" :level="4" class="mb-3 sm:mb-6">Links de Serviços</x-he4rt::heading>
+                <x-he4rt::heading size="2xs" :level="2" class="mb-3 sm:mb-6">Links de Serviços</x-he4rt::heading>
                 <ul class="text-text-medium space-y-2 text-sm sm:space-y-4">
                     <li>
                         <a href="/key-account" class="hover:text-secondary transition">Key Account</a>
@@ -48,11 +48,12 @@
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4">
-                <x-he4rt::heading :level="4" size="2xs">Contato e endereço</x-he4rt::heading>
+                <x-he4rt::heading :level="2" size="2xs">Contato e endereço</x-he4rt::heading>
                 <x-he4rt::text class="font-semibold" size="sm">contato@firece.com.br</x-he4rt::text>
                 <div class="flex items-center gap-2">
                     <img
-                        src="{{ asset('images/brasil-flag.png') }}"
+                        src="{{ asset('images/brasil-flag.webp') }}"
+                        loading="lazy"
                         alt="Phone"
                         class="h-4 w-6 rounded-sm object-contain sm:h-5 sm:w-7"
                     />
@@ -61,7 +62,7 @@
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4 lg:col-span-2 xl:col-span-2">
-                <x-he4rt::heading :level="4" size="2xs">Nossa Newsletter</x-he4rt::heading>
+                <x-he4rt::heading :level="2" size="2xs">Nossa Newsletter</x-he4rt::heading>
                 <x-he4rt::text size="sm">
                     Envie nos o seu email e receba as melhores notícias e textos sobre o que acontece no mercado
                     financeiro
