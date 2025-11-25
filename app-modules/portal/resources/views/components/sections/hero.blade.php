@@ -10,7 +10,12 @@
 
 <section class="hp-section relative" id="hero">
     <div class="absolute inset-0 -left-[20%] z-0 h-full w-[150%]">
-        <img src="{{ asset('images/3pontos/logo-chain.png') }}" alt="" class="h-full w-full object-cover" />
+        <img
+            src="{{ asset('images/3pontos/logo-chain.webp') }}"
+            fetchpriority="high"
+            alt=""
+            class="h-full w-full object-cover"
+        />
 
         <div class="bg-elevation-surface/90 absolute inset-0"></div>
         <div class="from-elevation-surface/80 absolute inset-0 bg-gradient-to-t to-transparent"></div>
@@ -25,11 +30,10 @@
                     </x-slot>
 
                     <x-slot:description>
-                        Somos o ecossistema que une solução e conhecimento em um único lugar Aceleramos sua empresa.
-                        Fortalecemos sua carreira.
+                        Somos o ecossistema que une solução e conhecimento em um único lugar.
                     </x-slot>
                     <x-slot:actions>
-                        <x-he4rt::button>Button</x-he4rt::button>
+                        <x-he4rt::button href="#contact">Entre em contato</x-he4rt::button>
                     </x-slot>
                 </x-he4rt::headline>
             </div>

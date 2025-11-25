@@ -1,10 +1,11 @@
 <section class="hp-section relative" id="social-action">
     <div
-        class="absolute bottom-0 left-0 z-1 flex origin-top rotate-90 justify-start sm:-translate-x-[20%] sm:translate-y-32 lg:-translate-x-[5%] lg:translate-y-24 lg:rotate-0"
+        class="absolute bottom-0 left-0 z-1 flex origin-top rotate-90 justify-start sm:-translate-x-[20%] sm:translate-y-75 lg:-translate-x-[5%] lg:translate-y-24 lg:rotate-0"
     >
         <img
-            src="{{ asset('images/3pontos/logo-chain.png') }}"
+            src="{{ asset('images/3pontos/logo-chain.webp') }}"
             alt=""
+            loading="lazy"
             class="hidden h-auto w-full object-contain sm:block sm:max-w-[60%]"
         />
     </div>
@@ -28,16 +29,13 @@
                         Cada número reflete nosso impacto real: a união entre inovação, talentos e negócios que aceleram
                         o crescimento e criam conexões com propósito
                     </x-slot>
-                    <x-slot:actions>
-                        <x-he4rt::button>Button</x-he4rt::button>
-                    </x-slot>
                 </x-he4rt::headline>
             </div>
 
             <div
                 x-data="{ visible: false }"
                 x-intersect.threshold.20.once="visible = true"
-                class="grid grid-cols-1 gap-8 lg:grid-cols-3"
+                class="grid grid-cols-1 gap-8 sm:mt-12 lg:grid-cols-3"
             >
                 <x-he4rt::animate-block>
                     <x-he4rt::card>

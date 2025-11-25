@@ -6,6 +6,10 @@
 ])
 
 @php
+    if ($attributes->has('href')) {
+        $as = 'a';
+    }
+
     $iconSizeCls = 'hp-icon-size-' . $size;
 @endphp
 
@@ -17,5 +21,5 @@
         ])
     }}
 >
-    <x-filament::icon :icon="$icon" {{ $attributes->merge(['class' => $iconSizeCls]) }} />
+    <x-filament::icon :icon="$icon" class="{{ $iconSizeCls }}" />
 </{{ $as }}>
