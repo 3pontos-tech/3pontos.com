@@ -67,8 +67,8 @@
                     financeiro
                 </x-he4rt::text>
                 <form class="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:gap-4">
-                    <x-he4rt::input type="email" placeholder="Seu email" id="email" />
-                    <x-he4rt::button type="submit">Inscrever-se</x-he4rt::button>
+                    <x-he4rt::input type="email" placeholder="Seu email" id="email" class="flex-1" />
+                    <x-he4rt::button type="submit" class="shrink-0">Inscrever-se</x-he4rt::button>
                 </form>
             </div>
         </div>
