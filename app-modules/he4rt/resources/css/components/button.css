@@ -48,7 +48,7 @@
 }
 
 .hp-button-size-md {
-    @apply px-4 py-2.5 text-sm;
+    @apply px-4 py-2.5;
 
     & .hp-button-icon,
     & .hp-button-spinner svg {
