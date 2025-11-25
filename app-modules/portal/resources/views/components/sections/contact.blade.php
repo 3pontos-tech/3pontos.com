@@ -48,30 +48,32 @@
 
                 <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
                     <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
-                        <x-he4rt::icon icon="heroicon-o-phone" class="bg-elevation-02dp" />
+                        <x-he4rt::icon icon="heroicon-o-envelope" class="bg-elevation-02dp" />
                         <div class="flex flex-1 flex-col gap-1">
-                            <x-he4rt::text size="sm" class="font-medium">Telefone</x-he4rt::text>
-                            <x-he4rt::text class="text-text-high font-bold">+55 90000-0000</x-he4rt::text>
+                            <x-he4rt::text size="sm" class="font-medium">Email</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold">email@example.com</x-he4rt::text>
                         </div>
                     </x-slot>
                 </x-he4rt::card>
 
                 <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
                     <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
-                        <x-he4rt::icon icon="heroicon-o-phone" class="bg-elevation-02dp" />
+                        <x-he4rt::icon icon="heroicon-o-map-pin" class="bg-elevation-02dp" />
                         <div class="flex flex-1 flex-col gap-1">
-                            <x-he4rt::text size="sm" class="font-medium">Telefone</x-he4rt::text>
-                            <x-he4rt::text class="text-text-high font-bold">+55 90000-0000</x-he4rt::text>
+                            <x-he4rt::text size="sm" class="font-medium">Endereço</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold">
+                                Av. Dr. Cardoso de Melo - Vila Olímpia - São Paulo
+                            </x-he4rt::text>
                         </div>
                     </x-slot>
                 </x-he4rt::card>
 
                 <x-he4rt::card :interactive="false" class="h-fit border-none bg-transparent p-0">
                     <x-slot:icon class="flex-col items-start gap-3 sm:flex-row sm:items-center">
-                        <x-he4rt::icon icon="heroicon-o-phone" class="bg-elevation-02dp" />
+                        <x-he4rt::icon icon="heroicon-o-arrow-path" class="bg-elevation-02dp" />
                         <div class="flex flex-1 flex-col gap-1">
-                            <x-he4rt::text size="sm" class="font-medium">Telefone</x-he4rt::text>
-                            <x-he4rt::text class="text-text-high font-bold">+55 90000-0000</x-he4rt::text>
+                            <x-he4rt::text size="sm" class="font-medium">Siga nas redes sociais</x-he4rt::text>
+                            <x-he4rt::text class="text-text-high font-bold"></x-he4rt::text>
                         </div>
                     </x-slot>
                 </x-he4rt::card>
