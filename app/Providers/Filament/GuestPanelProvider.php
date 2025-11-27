@@ -40,7 +40,7 @@ final class GuestPanelProvider extends PanelProvider
             ->renderHook(PanelsRenderHook::SIDEBAR_NAV_END, fn () => Blade::render(<<<'BLADE'
                @guest
                     <div class="flex flex-col md:hidden mt-auto items-center space-y-4">
-                        <x-he4rt::button target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
+                        <x-he4rt::button rel="noopener noreferrer" target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
                             Github
                         </x-he4rt::button>
 
@@ -52,7 +52,7 @@ final class GuestPanelProvider extends PanelProvider
             ->renderHook(PanelsRenderHook::TOPBAR_END, fn () => Blade::render(<<<'BLADE'
                @guest
                     <div class="hidden md:flex items-center space-x-4">
-                        <x-he4rt::button target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
+                        <x-he4rt::button rel="noopener noreferrer" target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
                             Github
                         </x-he4rt::button>
 
