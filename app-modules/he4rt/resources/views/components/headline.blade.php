@@ -10,11 +10,7 @@
     $tag = $as;
     $animate = $animation !== "none";
 
-    $classes = collect([
-        "hp-headline",
-        "hp-headline-align-" . $align,
-        "hp-headline-size-" . $size,
-    ])
+    $classes = collect(["hp-headline", "hp-headline-align-" . $align, "hp-headline-size-" . $size])
         ->filter()
         ->implode(" ");
 
@@ -22,21 +18,22 @@
         "fade-up" => [
             "enter" => "transition-all duration-700 ease-in",
             "start" => "translate-y-6 opacity-0",
-            "end" => "translate-y-0 opacity-100",
+            "end" => "!translate-y-0 !opacity-100",
         ],
         "scale" => [
             "enter" => "transition-all duration-700 ease-in",
             "start" => "scale-95 opacity-0",
-            "end" => "scale-100 opacity-100",
+            "end" => "!scale-100 !opacity-100",
         ],
         "blur" => [
             "enter" => "transition-all duration-700 ease-out",
             "start" => "opacity-0 blur-sm",
-            "end" => "blur-0 opacity-100",
+            "end" => "!blur-0 !opacity-100",
         ],
     ];
 
     $anim = $animations[$animation] ?? [];
+    $initialState = $animate ? $anim["enter"] . " " . $anim["start"] : "";
 @endphp
 
 <div {{ $attributes->class($classes) }}>
@@ -44,18 +41,14 @@
         class="hp-headline-container"
         @if ($animate)
             x-data="{ shown: false }"
-            x-intersect.threshold.20.once="shown = true"
+            x-intersect.threshold.10.once="shown = true"
         @endif
     >
         @isset($badge)
             <div
-                class="hp-headline-badge"
+                class="hp-headline-badge {{ $initialState }}"
                 @if ($animate)
-                    x-show="shown"
-                    x-transition:enter="{{ $anim["enter"] }}"
-                    x-transition:enter-start="{{ $anim["start"] }}"
-                    x-transition:enter-end="{{ $anim["end"] }}"
-                    x-cloak
+                    :class="shown ? '{{ $anim["end"] }}' : ''"
                 @endif
             >
                 {{ $badge }}
@@ -65,13 +58,14 @@
         <div class="hp-headline-content">
             @isset($title)
                 <h1
-                    {{ $title->attributes->class(["hp-headline-title", "delay-100" => $animate]) }}
+                    {{
+                        $title->attributes->class([
+                            "hp-headline-title",
+                            $animate ? "delay-100 " . $initialState : "",
+                        ])
+                    }}
                     @if ($animate)
-                        x-show="shown"
-                        x-transition:enter="{{ $anim["enter"] }}"
-                        x-transition:enter-start="{{ $anim["start"] }}"
-                        x-transition:enter-end="{{ $anim["end"] }}"
-                        x-cloak
+                        :class="shown ? '{{ $anim["end"] }}' : ''"
                     @endif
                 >
                     @foreach (str($title)->explode(" ") as $word)
@@ -90,13 +84,14 @@
 
             @isset($subtitle)
                 <div
-                    {{ $subtitle->attributes->class(["hp-headline-subtitle", "delay-200" => $animate]) }}
+                    {{
+                        $subtitle->attributes->class([
+                            "hp-headline-subtitle",
+                            $animate ? "delay-200 " . $initialState : "",
+                        ])
+                    }}
                     @if ($animate)
-                        x-show="shown"
-                        x-transition:enter="{{ $anim["enter"] }}"
-                        x-transition:enter-start="{{ $anim["start"] }}"
-                        x-transition:enter-end="{{ $anim["end"] }}"
-                        x-cloak
+                        :class="shown ? '{{ $anim["end"] }}' : ''"
                     @endif
                 >
                     {{ $subtitle }}
@@ -105,13 +100,9 @@
 
             @isset($description)
                 <p
-                    class="hp-headline-description {{ $animate ? "delay-300" : "" }}"
+                    class="hp-headline-description {{ $animate ? "delay-300 " . $initialState : "" }}"
                     @if ($animate)
-                        x-show="shown"
-                        x-transition:enter="{{ $anim["enter"] }}"
-                        x-transition:enter-start="{{ $anim["start"] }}"
-                        x-transition:enter-end="{{ $anim["end"] }}"
-                        x-cloak
+                        :class="shown ? '{{ $anim["end"] }}' : ''"
                     @endif
                 >
                     {{ $description }}
@@ -121,13 +112,9 @@
 
         @isset($actions)
             <div
-                class="hp-headline-actions {{ $animate ? "delay-400" : "" }}"
+                class="hp-headline-actions {{ $animate ? "delay-400 " . $initialState : "" }}"
                 @if ($animate)
-                    x-show="shown"
-                    x-transition:enter="{{ $anim["enter"] }}"
-                    x-transition:enter-start="{{ $anim["start"] }}"
-                    x-transition:enter-end="{{ $anim["end"] }}"
-                    x-cloak
+                    :class="shown ? '{{ $anim["end"] }}' : ''"
                 @endif
             >
                 {{ $actions }}
