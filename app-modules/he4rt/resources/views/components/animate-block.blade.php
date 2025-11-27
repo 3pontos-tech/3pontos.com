@@ -51,7 +51,7 @@
     @endif
     {{ $attributes }}
 >
-    <div class="{{ $transitionClass }}" :class="visible ? '{{ $anim["end"] }}' : '{{ $anim["start"] }}'">
+    <div class="{{ $transitionClass }} h-full" :class="visible ? '{{ $anim["end"] }}' : '{{ $anim["start"] }}'">
         {{ $slot }}
     </div>
 </div>
