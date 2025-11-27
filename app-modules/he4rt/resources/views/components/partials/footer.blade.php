@@ -29,9 +29,6 @@
                         <a href="#foundations" class="hover:text-secondary transition">Nossos pilares</a>
                     </li>
                     <li>
-                        <a href="#social-action" class="hover:text-secondary transition">Missão social</a>
-                    </li>
-                    <li>
                         <a href="#projects" class="hover:text-secondary transition">Projetos</a>
                     </li>
                     <li>
@@ -93,17 +90,8 @@
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4">
-                <x-he4rt::heading :level="3" size="2xs">Contato e endereço</x-he4rt::heading>
-                <x-he4rt::text class="font-semibold" size="sm">contato@firece.com.br</x-he4rt::text>
-                <div class="flex items-center gap-2">
-                    <img
-                        src="{{ asset('images/brasil-flag.webp') }}"
-                        loading="lazy"
-                        alt="Brazil phone number"
-                        class="h-4 w-6 rounded-sm object-contain sm:h-5 sm:w-7"
-                    />
-                    <x-he4rt::text class="font-semibold" size="sm">(11) 98720-1303</x-he4rt::text>
-                </div>
+                <x-he4rt::heading :level="3" size="2xs">Contato</x-he4rt::heading>
+                <x-he4rt::text class="font-semibold" size="sm">contato@3pontos.com</x-he4rt::text>
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4 xl:col-span-2">
