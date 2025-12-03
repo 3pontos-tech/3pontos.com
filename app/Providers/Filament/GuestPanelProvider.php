@@ -40,7 +40,7 @@ final class GuestPanelProvider extends PanelProvider
             ->renderHook(PanelsRenderHook::SIDEBAR_NAV_END, fn () => Blade::render(<<<'BLADE'
                @guest
                     <div class="flex flex-col md:hidden mt-auto items-center space-y-4">
-                        <x-he4rt::button icon="heroicon-s-arrow-top-right-on-square" variant="outline">
+                        <x-he4rt::button rel="noopener noreferrer" target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
                             Github
                         </x-he4rt::button>
 
@@ -52,7 +52,7 @@ final class GuestPanelProvider extends PanelProvider
             ->renderHook(PanelsRenderHook::TOPBAR_END, fn () => Blade::render(<<<'BLADE'
                @guest
                     <div class="hidden md:flex items-center space-x-4">
-                        <x-he4rt::button icon="heroicon-s-arrow-top-right-on-square" variant="outline">
+                        <x-he4rt::button rel="noopener noreferrer" target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
                             Github
                         </x-he4rt::button>
 
@@ -62,21 +62,24 @@ final class GuestPanelProvider extends PanelProvider
             BLADE
             ))
             ->navigationItems([
-                NavigationItem::make('Sobre')
-                    ->url('#about')
+                NavigationItem::make('Home')
+                    ->url('#hero')
                     ->sort(0),
-                NavigationItem::make('Comunidades')
-                    ->url('#community')
-                    ->sort(2),
-                NavigationItem::make('Projetos')
+                NavigationItem::make('Nossos pilares')
+                    ->url('#foundations')
+                    ->sort(1),
+                NavigationItem::make('Projects')
                     ->url('#projects')
                     ->sort(3),
-                NavigationItem::make('Depoimentos')
-                    ->url('#testimonials')
+                NavigationItem::make('Comunidade')
+                    ->url('#community')
                     ->sort(4),
+                NavigationItem::make('Eventos')
+                    ->url('#events')
+                    ->sort(5),
                 NavigationItem::make('Contato')
                     ->url('#contact')
-                    ->sort(5),
+                    ->sort(6),
             ])
             ->viteTheme('app-modules/he4rt/resources/css/themes/3pontos/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')

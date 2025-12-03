@@ -1,78 +1,57 @@
 @props([
-    'type' => 'fade-up-glass',
-    'delay' => null,
-    'duration' => '500',
-    'observe' => false,
+    "type" => "fade-up-glass",
+    "delay" => null,
+    "duration" => "700",
+    "observe" => false,
 ])
 
 @php
     $definitions = [
-        'fade-up-glass' => [
-            'start' => 'translate-y-8 opacity-100',
-            'end' => 'translate-y-0 opacity-100',
+        "fade-up-glass" => [
+            "start" => "translate-y-8 opacity-100",
+            "end" => "translate-y-0 opacity-100",
         ],
-        'fade-up' => [
-            'start' => 'translate-y-8 opacity-0',
-            'end' => 'translate-y-0 opacity-100',
+        "fade-up" => [
+            "start" => "translate-y-8 opacity-0",
+            "end" => "translate-y-0 opacity-100",
         ],
-        'fade-down' => [
-            'start' => '-translate-y-8 opacity-0',
-            'end' => 'translate-y-0 opacity-100',
+        "fade-down" => [
+            "start" => "-translate-y-8 opacity-0",
+            "end" => "translate-y-0 opacity-100",
         ],
-        'fade-right' => [
-            'start' => '-translate-x-8 opacity-0',
-            'end' => 'translate-x-0 opacity-100',
+        "fade-right" => [
+            "start" => "-translate-x-8 opacity-0",
+            "end" => "translate-x-0 opacity-100",
         ],
-        'fade-left' => [
-            'start' => 'translate-x-8 opacity-0',
-            'end' => 'translate-x-0 opacity-100',
+        "fade-left" => [
+            "start" => "translate-x-8 opacity-0",
+            "end" => "translate-x-0 opacity-100",
         ],
-        'scale' => [
-            'start' => 'scale-90 opacity-0',
-            'end' => 'scale-100 opacity-100',
+        "scale" => [
+            "start" => "scale-90 opacity-0",
+            "end" => "scale-100 opacity-100",
         ],
-        'blur' => [
-            'start' => 'opacity-0 blur-sm',
-            'end' => 'blur-0 opacity-100',
+        "blur" => [
+            "start" => "opacity-0 blur-sm",
+            "end" => "blur-0 opacity-100",
         ],
     ];
 
     $anim = $definitions[$type];
-
-    $transitionClass = 'transition-all ease-in-out duration-' . $duration;
-
+    $transitionClass = "transition-all ease-in duration-" . $duration;
     if ($delay) {
-        $transitionClass .= ' delay-' . $delay;
+        $transitionClass .= " delay-" . $delay;
     }
 @endphp
 
-@if ($observe)
-    <div x-data="{ visible: false }" x-intersect.once.threshold.20="visible = true" {{ $attributes }}>
-        <div
-            x-show="visible"
-            x-transition:enter="{{ $transitionClass }}"
-            x-transition:enter-start="{{ $anim['start'] }}"
-            x-transition:enter-end="{{ $anim['end'] }}"
-            x-transition:leave="{{ $transitionClass }}"
-            x-transition:leave-start="{{ $anim['end'] }}"
-            x-transition:leave-end="{{ $anim['start'] }}"
-            x-cloak
-        >
-            {{ $slot }}
-        </div>
-    </div>
-@else
-    <div
-        x-show="visible"
-        x-transition:enter="{{ $transitionClass }}"
-        x-transition:enter-start="{{ $anim['start'] }}"
-        x-transition:enter-end="{{ $anim['end'] }}"
-        x-transition:leave="{{ $transitionClass }}"
-        x-transition:leave-start="{{ $anim['end'] }}"
-        x-transition:leave-end="{{ $anim['start'] }}"
-        x-cloak
-        {{ $attributes }}
-    >
+<div
+    @if ($observe)
+        x-data="{ visible: false }"
+        x-intersect.once.threshold.20="visible = true"
+    @endif
+    {{ $attributes }}
+>
+    <div class="{{ $transitionClass }} h-full" :class="visible ? '{{ $anim["end"] }}' : '{{ $anim["start"] }}'">
         {{ $slot }}
     </div>
-@endif
+</div>

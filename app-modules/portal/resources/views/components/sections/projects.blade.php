@@ -1,6 +1,6 @@
 <section
-    class="hp-section bg-elevation-01dp/86 border-outline-dark relative max-h-[80vh] min-h-[80vh] overflow-hidden border-t border-b backdrop-blur-md"
-    id="about"
+    class="hp-section bg-elevation-01dp/86 border-outline-dark relative max-h-[80vh] min-h-[80vh] scroll-mt-30 overflow-hidden border-t border-b backdrop-blur-md"
+    id="projects"
 >
     <div
         class="hp-container relative z-10 grid h-full grid-cols-1 gap-x-12 py-8 md:py-8 lg:grid-cols-[1fr_2fr] lg:py-10 xl:py-16"
@@ -19,9 +19,9 @@
 
         <div class="flex h-full min-h-0 flex-col gap-4 lg:items-start">
             <div>
-                <x-he4rt::headline size="sm">
+                <x-he4rt::headline>
                     <x-slot:badge>
-                        <x-he4rt::section-title size="sm">Projetos</x-he4rt::section-title>
+                        <x-he4rt::section-title>Projetos</x-he4rt::section-title>
                     </x-slot>
                     <x-slot:title>Aonde a Disrupção acontece</x-slot>
                     <x-slot:description>
@@ -40,9 +40,9 @@
                         <x-he4rt::icon size="sm" class="rounded-sm" />
                         <x-he4rt::heading size="2xs">Ipê</x-he4rt::heading>
                     </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
+                    <x-slot:description class="leading-[1.5]">
                         Uma plataforma de investimentos intuitiva e acessível, focada em democratizar o acesso ao
-                        mercado financeiro. Com uma interface amigável e integração segura com APIs. Ela torna o
+                        mercado financeiro. Com uma interface amigável e integração segura com APIs, ela torna o
                         processo de investimento simples e seguro para todos.
                     </x-slot>
                 </x-he4rt::card>
@@ -52,7 +52,7 @@
                         <x-he4rt::icon size="sm" class="rounded-sm" />
                         <x-he4rt::heading size="2xs">Flamma</x-he4rt::heading>
                     </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
+                    <x-slot:description class="leading-[1.5]">
                         Clube de benefícios exclusivo que vai além, oferecendo consultoria financeira personalizada e
                         acesso a produtos e serviços com condições especiais. É a solução ideal para quem busca otimizar
                         suas finanças e ter acesso a vantagens únicas no mercado.
@@ -64,23 +64,10 @@
                         <x-he4rt::icon size="sm" class="rounded-sm" />
                         <x-he4rt::heading size="2xs">Flare</x-he4rt::heading>
                     </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
+                    <x-slot:description class="leading-[1.5]">
                         serviço digital e ágil que oferece avaliação e diagnóstico financeiro detalhado. Utilizando um
                         algoritmo avançado de análise de dados, ele permite que os clientes recebam um parecer
                         financeiro completo em curto período de tempo.
-                    </x-slot>
-                </x-he4rt::card>
-
-                <x-he4rt::card class="h-fit gap-4">
-                    <x-slot:icon class="items-center gap-4">
-                        <x-he4rt::icon size="sm" class="rounded-sm" />
-                        <x-he4rt::heading size="2xs">Soluções Estratégicas para Seu Crescimento</x-he4rt::heading>
-                    </x-slot>
-                    <x-slot:description class="text-xs leading-[1.5]">
-                        Sua empresa tem uma visão clara, mas enfrenta desafios tecnológicos. Aqui na 3 Pontos,
-                        desenvolvemos e implementamos soluções de ponta que transformam essas barreiras em
-                        oportunidades. Do desenvolvimento customizado ao marketing digital estratégico, nós somos o
-                        parceiro que sua empresa precisa para escalar com confiança.
                     </x-slot>
                 </x-he4rt::card>
             </div>
