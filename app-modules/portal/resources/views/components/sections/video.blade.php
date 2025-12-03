@@ -3,34 +3,50 @@
         return {
             scale: 1,
             visible: false,
-
             minScale: 1,
-            maxScale: 3.3,
+            maxScale: 3.8,
             animationCutoff: 0.7,
 
             init() {
                 this.setMaxScale();
-                window.addEventListener('resize', () => {
-                    this.setMaxScale();
-                    this.calculateProgress();
+                this.calculateProgress = this.calculateProgress.bind(this);
+
+                this.$watch('visible', (isVisible) => {
+                    if (this.$refs.videoPlayer) {
+                        if (isVisible) {
+                            this.$refs.videoPlayer.play();
+                        } else {
+                            this.$refs.videoPlayer.pause();
+                        }
+                    }
                 });
-                this.scrollHandler = () => {
-                    window.requestAnimationFrame(() => this.calculateProgress());
-                };
-                window.addEventListener('scroll', this.scrollHandler, { passive: true });
-                this.calculateProgress();
+
+                const observer = new IntersectionObserver(
+                    (entries) => {
+                        entries.forEach((entry) => {
+                            if (entry.isIntersecting) {
+                                window.addEventListener('scroll', this.calculateProgress);
+                                this.calculateProgress();
+                            } else {
+                                window.removeEventListener('scroll', this.calculateProgress);
+                                if (this.$refs.videoPlayer) this.$refs.videoPlayer.pause();
+                            }
+                        });
+                    },
+                    {
+                        threshold: 0,
+                    },
+                );
+
+                observer.observe(this.$el);
             },
 
             setMaxScale() {
                 if (window.innerWidth < 821) {
-                    this.maxScale = 6;
-                } else {
-                    this.maxScale = 3.3;
+                    this.maxScale = 12;
+                } else if (window.innerWidth < 1024) {
+                    this.maxScale = 8;
                 }
-            },
-
-            destroy() {
-                window.removeEventListener('scroll', this.scrollHandler);
             },
 
             calculateProgress() {
@@ -56,12 +72,12 @@
 </script>
 
 <section id="video" class="relative h-[300vh]" x-data="scrollZoomLogic()">
-    <div class="sticky top-0 flex h-screen w-full items-center justify-center overflow-hidden">
+    <div class="sticky top-8 flex h-screen w-full items-center justify-center overflow-hidden">
         <div class="hp-container relative z-10 flex items-center justify-center">
             <img
                 src="{{ asset('images/3pontos/logo-chain-white.png') }}"
                 alt="logo chain"
-                class="relative z-20 origin-center will-change-transform"
+                class="pointer-events-none relative z-20 origin-center will-change-transform"
                 :style="`transform: scale(${scale})`"
             />
 
@@ -69,10 +85,12 @@
                 <x-he4rt::animate-block
                     type="blur"
                     duration="700"
-                    class="pointer-events-auto h-[62%] w-[50%] overflow-hidden rounded-lg bg-black shadow-xl sm:h-[34%] sm:w-[25%]"
+                    class="pointer-events-auto h-[110%] w-[90%] overflow-hidden rounded-lg bg-transparent shadow-xl sm:h-[90%] sm:w-[60%] lg:h-[36.5%] lg:w-[28%]"
                 >
-                    <video class="h-full w-full object-cover" autoplay muted controls playsinline>
+                    <video x-ref="videoPlayer" class="h-full w-full object-cover" autoplay muted controls>
                         <source src="{{ asset('videos/3pontos-video.mp4') }}" type="video/mp4" />
+                        <source src="{{ asset('videos/3pontos-video.webm') }}" type="video/webm" />
+                        Your browser does not support the video tag.
                     </video>
                 </x-he4rt::animate-block>
             </div>
