@@ -2,6 +2,7 @@
     <x-portal::sections.hero />
     <x-portal::sections.foundations />
     <x-portal::sections.projects />
+    <x-portal::sections.video />
     <x-portal::sections.community />
     <x-portal::sections.events />
     <x-portal::sections.contact />
