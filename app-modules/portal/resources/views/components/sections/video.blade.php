@@ -6,39 +6,10 @@
             minScale: 1,
             maxScale: 3.8,
             animationCutoff: 0.7,
+            hasStarted: false,
 
             init() {
                 this.setMaxScale();
-                this.calculateProgress = this.calculateProgress.bind(this);
-
-                this.$watch('visible', (isVisible) => {
-                    if (this.$refs.videoPlayer) {
-                        if (isVisible) {
-                            this.$refs.videoPlayer.play();
-                        } else {
-                            this.$refs.videoPlayer.pause();
-                        }
-                    }
-                });
-
-                const observer = new IntersectionObserver(
-                    (entries) => {
-                        entries.forEach((entry) => {
-                            if (entry.isIntersecting) {
-                                window.addEventListener('scroll', this.calculateProgress);
-                                this.calculateProgress();
-                            } else {
-                                window.removeEventListener('scroll', this.calculateProgress);
-                                if (this.$refs.videoPlayer) this.$refs.videoPlayer.pause();
-                            }
-                        });
-                    },
-                    {
-                        threshold: 0,
-                    },
-                );
-
-                observer.observe(this.$el);
             },
 
             setMaxScale() {
@@ -59,19 +30,31 @@
                 let rawProgress = Math.max(0, Math.min(1, scrollPosition / scrollableDistance));
 
                 if (rawProgress >= this.animationCutoff) {
-                    this.scale = this.maxScale;
                     this.visible = true;
                 } else {
                     let zoomProgress = rawProgress / this.animationCutoff;
                     this.scale = this.minScale + (this.maxScale - this.minScale) * zoomProgress;
                     this.visible = false;
                 }
+
+                const isInsideViewport = rect.bottom > 0 && rect.top < 0;
+
+                if (this.$refs.videoPlayer) {
+                    if (this.visible && isInsideViewport) {
+                        if (!this.hasStarted) {
+                            this.$refs.videoPlayer.play();
+                            this.hasStarted = true;
+                        }
+                    } else {
+                        this.$refs.videoPlayer.pause();
+                    }
+                }
             },
         };
     }
 </script>
 
-<section id="video" class="relative h-[300vh]" x-data="scrollZoomLogic()">
+<section id="video" class="relative h-[300vh]" x-data="scrollZoomLogic()" @scroll.window.passive="calculateProgress">
     <div class="sticky top-8 flex h-screen w-full items-center justify-center overflow-hidden">
         <div class="hp-container relative z-10 flex items-center justify-center">
             <img
