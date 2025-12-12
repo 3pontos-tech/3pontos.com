@@ -2,6 +2,23 @@
     'bg' => 'bg-elevation-02dp',
 ])
 
+@php
+    $socials = [
+        [
+            'icon' => 'fab-instagram',
+            'link' => 'https://www.instagram.com/3pontos.hub/',
+        ],
+        [
+            'icon' => 'fab-square-facebook',
+            'link' => 'https://www.facebook.com/profile.php?id=61582825820628',
+        ],
+        [
+            'icon' => 'fab-x-twitter',
+            'link' => 'https://x.com/3Pontoshub',
+        ],
+    ];
+@endphp
+
 <footer class="bg-elevation-surface/32 border-outline-dark relative z-10 border-t backdrop-blur-md">
     <div class="hp-section mb-0! min-h-0! p-0!">
         <div
@@ -92,6 +109,14 @@
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4">
                 <x-he4rt::heading :level="3" size="2xs">Contato</x-he4rt::heading>
                 <x-he4rt::text class="font-semibold" size="sm">contato@3pontos.com</x-he4rt::text>
+                @foreach ($socials as $social)
+                    <x-he4rt::icon
+                        target="_blank"
+                        :href="$social['link']"
+                        :icon="$social['icon']"
+                        class="text-text-medium w-fit border-none bg-transparent p-0"
+                    />
+                @endforeach
             </div>
 
             <div class="col-span-1 flex flex-col gap-y-3 sm:gap-y-4 xl:col-span-2">
