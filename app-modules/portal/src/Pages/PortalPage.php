@@ -16,7 +16,7 @@ class PortalPage extends Dashboard
 
     protected static bool $shouldRegisterNavigation = false;
 
-    protected string $description = 'Somos o ecossistema que une solução e conhecimento em um único lugar Aceleramos sua empresa. Fortalecemos sua carreira.';
+    protected string $description = 'Somos o ecossistema que une solução e conhecimento em um único lugar aceleramos sua empresa enquanto fortalecemos sua carreira.';
 
     protected static ?string $title = 'Home';
 
@@ -50,7 +50,7 @@ class PortalPage extends Dashboard
             PanelsRenderHook::HEAD_START,
             fn (): string => Blade::render('components.metatags', [
                 'url' => $this->url,
-                'title' => $this->getTitle(),
+                'title' => 'Seja bem vindo à 3Pontos',
                 'description' => $this->description,
                 'coverImage' => $this->coverImage,
             ]),

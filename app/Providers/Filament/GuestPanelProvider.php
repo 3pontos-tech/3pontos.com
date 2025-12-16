@@ -44,7 +44,6 @@ final class GuestPanelProvider extends PanelProvider
                             Github
                         </x-he4rt::button>
 
-                        <x-he4rt::button icon-position="leading" icon="heroicon-o-user">Entrar agora</x-he4rt::button>
                     </div>
                @endguest
             BLADE
@@ -55,8 +54,6 @@ final class GuestPanelProvider extends PanelProvider
                         <x-he4rt::button rel="noopener noreferrer" target="_blank" href="https://github.com/3pontos-tech" icon="heroicon-s-arrow-top-right-on-square" variant="outline">
                             Github
                         </x-he4rt::button>
-
-                        <x-he4rt::button icon-position="leading" icon="heroicon-o-user">Entrar agora</x-he4rt::button>
                     </div>
                @endguest
             BLADE
