@@ -18,12 +18,20 @@
             'link' => 'https://www.instagram.com/3pontos.hub/',
         ],
         [
+            'icon' => 'fab-linkedin',
+            'link' => 'https://www.linkedin.com/company/3pontos3/',
+        ],
+        [
             'icon' => 'fab-square-facebook',
             'link' => 'https://www.facebook.com/profile.php?id=61582825820628',
         ],
         [
             'icon' => 'fab-x-twitter',
             'link' => 'https://x.com/3Pontoshub',
+        ],
+        [
+            'icon' => 'fab-github',
+            'link' => 'https://github.com/3pontos-tech',
         ],
     ];
 @endphp
