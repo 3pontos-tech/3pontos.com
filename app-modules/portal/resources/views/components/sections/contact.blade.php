@@ -7,7 +7,7 @@
         ],
         [
             'label' => 'Endereço',
-            'value' => 'Av. Dr. Cardoso de Melo - Vila Olímpia - São Paulo',
+            'value' => 'R. Gomes de Carvalho, 1629 - sala 105 - Vila Olímpia, São Paulo - SP, 04547-006',
             'icon' => 'heroicon-o-map-pin',
         ],
     ];
