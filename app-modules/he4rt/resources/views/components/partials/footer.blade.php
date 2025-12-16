@@ -39,7 +39,7 @@
                 <div class="flex flex-col gap-y-2 sm:gap-y-3">
                     <x-he4rt::text class="text-text-high font-semibold">Nosso Endereço</x-he4rt::text>
                     <x-he4rt::text size="sm" class="font-medium">
-                        Dr. Cardoso de Mello, 1666, Cj, 92 Vila Olímpia, São Paulo
+                        R. Gomes de Carvalho, 1629 - sala 105 - Vila Olímpia, São Paulo - SP, 04547-006
                     </x-he4rt::text>
                 </div>
             </div>
