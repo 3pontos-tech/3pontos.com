@@ -19,7 +19,7 @@
                     ambiente qualificado e propício para que o melhor aconteça.
                 </x-slot>
                 <x-slot:actions>
-                    <x-he4rt::button target="_blank" rel="noopener noreferer" href="https://discord.gg/r96VvjBUTj">
+                    <x-he4rt::button target="_blank" rel="noopener noreferrer" href="https://discord.gg/r96VvjBUTj">
                         Junte-se a nós
                     </x-he4rt::button>
                 </x-slot>
