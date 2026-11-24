@@ -53,7 +53,7 @@ class PortalPage extends Dashboard
                 'title' => 'Seja bem vindo à 3Pontos',
                 'description' => $this->description,
                 'coverImage' => $this->coverImage,
-            ]) . $this->impactSiteVerificationTag(),
+            ]).$this->impactSiteVerificationTag(),
         );
     }
 
