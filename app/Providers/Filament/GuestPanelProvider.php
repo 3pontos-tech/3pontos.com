@@ -31,6 +31,7 @@ final class GuestPanelProvider extends PanelProvider
             ->default()
             ->id('guest')
             ->path('')
+            ->domain(config('app.main_domain'))
             ->colors([
                 'primary' => Color::Purple,
             ])

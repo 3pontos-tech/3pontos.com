@@ -9,6 +9,7 @@
     "license": "MIT",
     "require": {
         "php": "^8.4",
+        "3pontos/consultoria": ">=1",
         "3pontos/portal": ">=1",
         "filament/filament": "^4.2.3",
         "filament/spatie-laravel-media-library-plugin": "^4.2.3",

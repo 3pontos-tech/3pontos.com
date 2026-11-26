@@ -58,6 +58,19 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Domínio principal
+    |--------------------------------------------------------------------------
+    |
+    | Quando definido (ex.: 3pontos.com), os painéis do Filament (home e admin)
+    | só respondem neste domínio. Assim a raiz de outros domínios, como o da
+    | consultoria, não cai na home principal. Vazio mantém o comportamento
+    | antigo: os painéis respondem em qualquer domínio.
+    |
+    */
+    'main_domain' => env('APP_MAIN_DOMAIN') ?: null,
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Timezone
     |--------------------------------------------------------------------------
     |

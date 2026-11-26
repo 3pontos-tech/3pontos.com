@@ -25,6 +25,8 @@
     </source>
     <php>
         <env name="APP_ENV" value="testing"/>
+        <env name="APP_MAIN_DOMAIN" value="3pontos.test"/>
+        <env name="CONSULTORIA_DOMAIN" value="consultoria.3pontos.test"/>
         <env name="APP_MAINTENANCE_DRIVER" value="file"/>
         <env name="BCRYPT_ROUNDS" value="4"/>
         <env name="BROADCAST_CONNECTION" value="null"/>
