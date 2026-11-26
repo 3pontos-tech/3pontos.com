@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3Pontos | Consultoria em tecnologia e IA, agentes e licenciamento</title>
 <meta name="description" content="Consultoria em tecnologia e inteligência artificial: diagnóstico, agentes de IA, dados e software, com licenças Microsoft, Google e Adobe pelo canal oficial.">
-{{-- Fica fora dos buscadores até a publicação (STORY 22 troca por index, follow). --}}<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="{{ $consultoria['indexavel'] ? 'index, follow' : 'noindex, nofollow' }}">
 <meta name="theme-color" content="#08090A">
 <meta property="og:title" content="3Pontos | Consultoria em tecnologia e IA que resolve problema de negócio">
 <meta property="og:description" content="Diagnóstico, agentes de IA e licenciamento de ponta a ponta, com um parceiro só.">
-<meta property="og:image" content="https://www.3pontos.com.br/img/og.jpg">
+<meta property="og:image" content="{{ $consultoria['url'] }}/consultoria/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://www.3pontos.com.br/">
+<meta property="og:url" content="{{ $consultoria['url'] }}/">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image:alt" content="Render de vidro da identidade da 3Pontos">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Azeret+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://www.3pontos.com.br/">
+<link rel="canonical" href="{{ $consultoria['url'] }}/">
 <link rel="stylesheet" href="{{ asset('consultoria/css/style.css') }}">
 <script type="application/ld+json">@verbatim
 {
@@ -176,7 +176,7 @@
     <a href="#contato"><i>11</i><span>Pedir cotação</span></a>
   </nav>
   <div class="menu__foot">
-    <a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a>
+    <a href="mailto:contato@3pontos.com">contato@3pontos.com</a>
     <a href="tel:+5511981230123">+55 11 98123-0123</a>
   </div>
 </div>
@@ -701,7 +701,7 @@
       <p class="muted rail__lede" data-rise data-delay="2">
         Planilhas em que ninguém confia, sistemas que não conversam, um projeto parado porque o
         time interno não dá conta. A consultoria começa pelo problema de negócio e só depois
-        escolhe a ferramenta — em projetos pontuais ou ao lado do seu time, de forma contínua.
+        escolhe a ferramenta, em projetos pontuais ou ao lado do seu time, de forma contínua.
       </p>
     </div>
 
@@ -845,7 +845,7 @@
           </button>
         </h3>
         <div class="tp__body" id="tp0">
-          <p>O desafio chega do jeito que dói: “as vendas caíram”, “o time vive apagando incêndio”. Uma frase só, e ainda vaga — é o sintoma, não a causa.</p>
+          <p>O desafio chega do jeito que dói: “as vendas caíram”, “o time vive apagando incêndio”. Uma frase só, e ainda vaga: é o sintoma, não a causa.</p>
           <small>Nada é construído aqui. Só escutado.</small>
         </div>
         <h3 class="tp">
@@ -863,7 +863,7 @@
           </button>
         </h3>
         <div class="tp__body" id="tp2">
-          <p>Agora o leque fecha: tudo que foi levantado se afunila em um desafio só, escrito em uma frase e validado com você. É aqui que o sintoma vira problema.</p><p class="tp__mark"><b>Ponto 2 · o mais importante</b> O ponto de foco: o problema real, bem definido. Nenhuma solução nasce antes dele — e chegar até aqui custa cerca de 60% do tempo do projeto.</p>
+          <p>Agora o leque fecha: tudo que foi levantado se afunila em um desafio só, escrito em uma frase e validado com você. É aqui que o sintoma vira problema.</p><p class="tp__mark"><b>Ponto 2 · o mais importante</b> O ponto de foco: o problema real, bem definido. Nenhuma solução nasce antes dele, e chegar até aqui custa cerca de 60% do tempo do projeto.</p>
           <small>Mapa de empatia · Jornada · 5 porquês até a causa raiz</small>
         </div>
         <h3 class="tp">
@@ -872,7 +872,7 @@
           </button>
         </h3>
         <div class="tp__body" id="tp3">
-          <p>Com o problema certo na mão, o leque abre de novo — agora de caminhos para resolver, criados junto com você e com quem vai usar. Nenhum é a resposta ainda: por isso aparecem vazados no gráfico.</p>
+          <p>Com o problema certo na mão, o leque abre de novo, agora de caminhos para resolver, criados junto com você e com quem vai usar. Nenhum é a resposta ainda: por isso aparecem vazados no gráfico.</p>
           <small>Brainstorming · Cocriação · Protótipos</small>
         </div>
         <h3 class="tp">
@@ -881,7 +881,7 @@
           </button>
         </h3>
         <div class="tp__body" id="tp4">
-          <p>O último fechamento: testar com gente de verdade, descartar o que não funciona e melhorar o que funciona — até sobrar uma coisa só, de pé.</p><p class="tp__mark"><b>Ponto 3 · chegada</b> A solução testada e validada, pronta para implementar. Os 40% finais do tempo moram aqui.</p>
+          <p>O último fechamento: testar com gente de verdade, descartar o que não funciona e melhorar o que funciona, até sobrar uma coisa só, de pé.</p><p class="tp__mark"><b>Ponto 3 · chegada</b> A solução testada e validada, pronta para implementar. Os 40% finais do tempo moram aqui.</p>
           <small>Testes com usuários · MVP · Plano de implementação</small>
         </div>
       </div>
@@ -1443,8 +1443,8 @@
         </div>
         <div class="aud__panel" role="tabpanel" id="ap2" aria-labelledby="a2" tabindex="0" hidden>
           <h3>Licenças de software para o setor público, com documentação em dia.</h3>
-          <p>Reunimos em uma página as modalidades que atendemos — pregão, dispensa,
-             inexigibilidade e adesão a ata — e a documentação de habilitação que o seu processo
+          <p>Reunimos em uma página as modalidades que atendemos (pregão, dispensa,
+             inexigibilidade e adesão a ata) e a documentação de habilitação que o seu processo
              precisa, do termo de referência à licença ativa.</p>
           <ul class="facts" data-stagger>
             <li><i>Modalidades</i><b>Pregão · Dispensa · Ata</b></li>
@@ -1512,7 +1512,7 @@
             <summary><i>01</i><span>A 3Pontos revende licenças de software?</span><b aria-hidden="true"></b></summary>
             <div class="qa__body"><p>Sim. A 3Pontos faz revenda de licenças dos principais players
               do mercado, com acesso pelos maiores distribuidores do país. Conte o que precisa e
-              verificamos a disponibilidade — inclusive de software que não está listado aqui.</p></div>
+              verificamos a disponibilidade, inclusive de software que não está listado aqui.</p></div>
           </details>
           <details class="qa" data-reveal>
             <summary><i>02</i><span>Como funciona a cotação?</span><b aria-hidden="true"></b></summary>
@@ -1616,17 +1616,18 @@
     <div class="contact__left">
       <h2 class="h-display" data-split>Tem uma compra ou um projeto <em>pela frente?</em></h2>
       <p class="lede" data-rise data-delay="2">
-        Conte o contexto. Nosso time comercial responde por e-mail com os próximos passos —
+        Conte o contexto. Nosso time comercial responde por e-mail com os próximos passos,
         normalmente no mesmo dia útil.
       </p>
       <ul class="contact__meta" data-stagger data-rise data-delay="3">
-        <li><i>E-mail</i><a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a></li>
+        <li><i>E-mail</i><a href="mailto:contato@3pontos.com">contato@3pontos.com</a></li>
         <li><i>Telefone</i><a href="tel:+5511981230123">+55 11 98123-0123</a></li>
-        <li><i>Endereço</i><span>R. Gomes de Carvalho, 1629 — Vila Olímpia, São Paulo, SP</span></li>
+        <li><i>Endereço</i><span>Rua Gomes de Carvalho, 1629, Vila Olímpia, São Paulo/SP</span></li>
       </ul>
     </div>
 
-    <form class="form" id="form" data-stagger novalidate>
+    <form class="form" id="form" method="post" action="{{ route('consultoria.contato') }}" data-stagger novalidate>
+      @csrf
       <div class="form__row">
         <div class="field" data-reveal>
           <label for="f-nome">Nome</label>
@@ -1686,7 +1687,7 @@
         <label class="consent" for="f-lgpd">
           <input id="f-lgpd" name="lgpd" type="checkbox" required>
           <span class="consent__box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.4 8.4l3 3 6.2-6.6"/></svg></span>
-          <span class="consent__txt">Concordo em receber contato da 3Pontos e com o tratamento dos meus dados conforme a <a class="link" href="#politica-de-privacidade" data-placeholder="politica-de-privacidade"><span>Política de Privacidade</span></a>.</span>
+          <span class="consent__txt">Concordo em receber contato da 3Pontos e com o tratamento dos meus dados conforme a <a class="link" href="{{ $consultoria['politicaUrl'] ?: '#politica-de-privacidade' }}" @if ($consultoria['politicaUrl'] === '')data-placeholder="politica-de-privacidade"@else target="_blank" rel="noopener"@endif><span>Política de Privacidade</span></a>.</span>
         </label>
         <small class="field__err">Marque a caixa para podermos responder.</small>
       </div>
@@ -1714,7 +1715,7 @@
       <div class="form__fail" hidden role="alert">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.4v6"/><path d="M12 16.4v.2"/><circle cx="12" cy="12" r="8.4"/></svg>
         <p><b>Não conseguimos enviar agora.</b> Tente de novo em alguns minutos ou escreva direto para
-          <a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a>.</p>
+          <a href="mailto:contato@3pontos.com">contato@3pontos.com</a>.</p>
         <button class="btn btn--ghost" type="button" data-form-retry><span>Tentar de novo</span></button>
       </div>
     </form>
@@ -1737,7 +1738,7 @@
         <p class="foot__sign">movimento · ecossistema · empresa</p>
 
         <h4>Nosso Endereço</h4>
-        <span>R. Gomes de Carvalho, 1629 — Vila Olímpia, São Paulo, SP · 04547-006</span>
+        <span>Rua Gomes de Carvalho, 1629, Vila Olímpia, São Paulo/SP · CEP 04.547-006</span>
 
         <!-- O selo vem com a placa branca de fábrica justamente para ficar
              legível em qualquer fundo: no escuro ele entra como veio, sem
@@ -1765,8 +1766,8 @@
 
       <div class="foot__col" data-reveal>
         <h4>Contato e Endereço</h4>
-        <a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a>
-        <a class="foot__social" href="#linkedin" data-placeholder="linkedin" aria-label="3Pontos no LinkedIn">
+        <a href="mailto:contato@3pontos.com">contato@3pontos.com</a>
+        <a class="foot__social" href="https://www.linkedin.com/company/3pontos3/" target="_blank" rel="noopener noreferrer" aria-label="3Pontos no LinkedIn">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8.2 10.4v5.4M8.2 7.9v.02M11.6 15.8v-5.4M11.6 12.9c0-1.6 1-2.6 2.3-2.6s2 .9 2 2.4v3.1"/></svg>
           <span>LinkedIn</span>
         </a>
@@ -1795,7 +1796,7 @@
     <p class="foot__legal">Adobe, Acrobat, o logotipo Adobe PDF, Adobe Express, o logotipo Adobe Express, Adobe Premiere, After Effects, Creative Cloud, Illustrator, InDesign, Lightroom, Photoshop e o logotipo Photoshop são marcas registradas ou marcas comerciais da Adobe nos Estados Unidos e/ou em outros países. Microsoft, Azure, Microsoft 365, SQL Server, Teams, Windows e Windows Server são marcas registradas ou marcas comerciais do grupo de empresas Microsoft. Google, Gemini, Google Workspace e Google Cloud são marcas da Google LLC. Claude e Anthropic são marcas da Anthropic PBC. OpenAI e ChatGPT são marcas da OpenAI. Autodesk e AutoCAD são marcas da Autodesk, Inc. As marcas citadas pertencem aos seus titulares, e a menção a elas não indica patrocínio ou endosso, salvo onde apresentada como credencial.</p>
 
     <div class="foot__base">
-      <span>© <b id="year">2026</b> 3Pontos Tecnologia · CNPJ 00.000.000/0001-00</span>
+      <span>© <b id="year">2026</b> 3 Pontos Aceleradora Ltda · CNPJ 46.181.096/0001-32</span>
       <span class="foot__clock"><i id="clock">--:--:--</i> São Paulo</span>
       <a href="#inicio" class="foot__top"><span>Voltar ao topo</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M8 3L4 7M8 3l4 4"/></svg></a>
     </div>

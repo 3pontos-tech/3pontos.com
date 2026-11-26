@@ -935,11 +935,11 @@
     var sendBtn = $('button[type="submit"]', form);
     var sendTxt = sendBtn ? $('span', sendBtn) : null;
 
-    /* TODO back-end: troque o corpo de `enviar` por
-       fetch('/api/contato', { method:'POST', body: dados }) ou pelo
-       endpoint do CRM. As duas saídas já estão tratadas abaixo. */
+    /* Envio real: POST no endpoint do formulário (action), com o _token
+       do @csrf dentro do FormData. Resposta que não é 2xx cai na falha. */
     function enviar(dados) {
-      return new Promise(function (resolve) { setTimeout(resolve, 520); });
+      return fetch(form.action, { method: 'POST', body: dados, headers: { Accept: 'application/json' } })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); });
     }
     function revelar(el) {
       if (!el) return;

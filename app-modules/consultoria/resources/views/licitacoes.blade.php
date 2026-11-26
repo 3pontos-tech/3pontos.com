@@ -5,14 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>3Pontos | Licenças de software para o setor público: licitação, dispensa e pregão</title>
 <meta name="description" content="Licenças Microsoft, Google e Adobe para órgãos públicos: pregão eletrônico, dispensa, inexigibilidade e adesão a ata, com documentação de habilitação e nota fiscal emitida no Brasil.">
-{{-- Fica fora dos buscadores até a publicação (STORY 22 troca por index, follow). --}}<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="{{ $consultoria['indexavel'] ? 'index, follow' : 'noindex, nofollow' }}">
 <meta name="theme-color" content="#08090A">
 <meta property="og:title" content="3Pontos | Licenças de software para o setor público">
 <meta property="og:description" content="Pregão, dispensa e adesão a ata de licenças Microsoft, Google e Adobe, com a documentação de habilitação reunida em um só lugar.">
-<meta property="og:image" content="https://www.3pontos.com.br/img/og.jpg">
+<meta property="og:image" content="{{ $consultoria['url'] }}/consultoria/img/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:url" content="https://www.3pontos.com.br/licitacoes.html">
+<meta property="og:url" content="{{ $consultoria['url'] }}/licitacoes">
 <meta property="og:locale" content="pt_BR">
 <meta name="twitter:card" content="summary_large_image">
 <meta property="og:image:alt" content="Render de vidro da identidade da 3Pontos">
@@ -20,7 +20,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&family=Azeret+Mono:wght@300;400;500&display=swap" rel="stylesheet">
-<link rel="canonical" href="https://www.3pontos.com.br/licitacoes.html">
+<link rel="canonical" href="{{ $consultoria['url'] }}/licitacoes">
 <link rel="stylesheet" href="{{ asset('consultoria/css/style.css') }}">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2308090A'/%3E%3Cg fill='%23fff'%3E%3Ccircle cx='9' cy='20' r='3'/%3E%3Ccircle cx='16' cy='11' r='3'/%3E%3Ccircle cx='23' cy='20' r='3'/%3E%3C/g%3E%3C/svg%3E">
 </head>
@@ -77,10 +77,12 @@
     <a href="{{ route('consultoria.home', absolute: false) }}"><i>07</i><span>Voltar para o site</span></a>
   </nav>
   <div class="menu__foot">
-    <a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a>
+    <a href="mailto:contato@3pontos.com">contato@3pontos.com</a>
     <a href="tel:+5511981230123">+55 11 98123-0123</a>
   </div>
 </div>
+
+<main>
 
 <!-- ░░ 01 — HERO ░░ -->
 <section class="hero" id="inicio" data-theme="dark" data-chapter="01 / Setor público">
@@ -105,7 +107,7 @@
 
       <p class="lede" data-rise data-delay="2">
         Licenças Microsoft, Google e Adobe para órgãos e entidades públicas, em pregão,
-        dispensa, inexigibilidade ou adesão a ata — com a papelada da habilitação reunida em um
+        dispensa, inexigibilidade ou adesão a ata, com a papelada da habilitação reunida em um
         só lugar e a proposta no formato que o edital pede.
       </p>
 
@@ -147,7 +149,7 @@
         <div>
           <h3 data-split>Proposta no formato do edital</h3>
           <p>Lemos o termo de referência, conferimos a descrição de cada item e devolvemos a
-             proposta com marca, part number, quantidade e prazo — do jeito que o pregoeiro
+             proposta com marca, part number, quantidade e prazo, do jeito que o pregoeiro
              precisa para julgar.</p>
         </div>
       </li>
@@ -210,7 +212,7 @@
         <p class="suite__kicker">02 · Dispensa de licitação</p>
         <h3>Contratação direta, dentro do limite da lei.</h3>
         <p>Enviamos cotação formal com validade, dados da empresa e certidões, no formato que o
-           setor de compras precisa para instruir o processo — sem idas e vindas.</p>
+           setor de compras precisa para instruir o processo, sem idas e vindas.</p>
         <ul class="chips" data-stagger><li>Cotação formal</li><li>Certidões</li><li>Nota de empenho</li></ul>
       </li>
 
@@ -336,7 +338,7 @@
         <i>02</i>
         <div>
           <h3 data-split>Regularidade fiscal e trabalhista</h3>
-          <p>Certidões federal, estadual e municipal, FGTS e CNDT — conferidas para estarem
+          <p>Certidões federal, estadual e municipal, FGTS e CNDT, conferidas para estarem
              dentro da validade no dia da sessão.</p>
         </div>
       </li>
@@ -427,16 +429,17 @@
       <h2 class="h-display" data-split>Tem um edital ou uma dispensa <em>em andamento?</em></h2>
       <p class="lede" data-rise data-delay="2">
         Mande o termo de referência ou a lista de itens. Nosso time comercial responde por
-        e-mail com a proposta e a documentação — normalmente no mesmo dia útil.
+        e-mail com a proposta e a documentação, normalmente no mesmo dia útil.
       </p>
       <ul class="contact__meta" data-stagger data-rise data-delay="3">
-        <li><i>E-mail</i><a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a></li>
+        <li><i>E-mail</i><a href="mailto:contato@3pontos.com">contato@3pontos.com</a></li>
         <li><i>Telefone</i><a href="tel:+5511981230123">+55 11 98123-0123</a></li>
-        <li><i>Endereço</i><span>R. Gomes de Carvalho, 1629 — Vila Olímpia, São Paulo, SP</span></li>
+        <li><i>Endereço</i><span>Rua Gomes de Carvalho, 1629, Vila Olímpia, São Paulo/SP</span></li>
       </ul>
     </div>
 
-    <form class="form" id="form" data-stagger novalidate>
+    <form class="form" id="form" method="post" action="{{ route('consultoria.contato') }}" data-stagger novalidate>
+      @csrf
       <div class="form__row">
         <div class="field" data-reveal>
           <label for="f-nome">Nome</label>
@@ -496,7 +499,7 @@
         <label class="consent" for="f-lgpd">
           <input id="f-lgpd" name="lgpd" type="checkbox" required>
           <span class="consent__box" aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M3.4 8.4l3 3 6.2-6.6"/></svg></span>
-          <span class="consent__txt">Concordo em receber contato da 3Pontos e com o tratamento dos meus dados conforme a <a class="link" href="#politica-de-privacidade" data-placeholder="politica-de-privacidade"><span>Política de Privacidade</span></a>.</span>
+          <span class="consent__txt">Concordo em receber contato da 3Pontos e com o tratamento dos meus dados conforme a <a class="link" href="{{ $consultoria['politicaUrl'] ?: '#politica-de-privacidade' }}" @if ($consultoria['politicaUrl'] === '')data-placeholder="politica-de-privacidade"@else target="_blank" rel="noopener"@endif><span>Política de Privacidade</span></a>.</span>
         </label>
         <small class="field__err">Marque a caixa para podermos responder.</small>
       </div>
@@ -524,7 +527,7 @@
       <div class="form__fail" hidden role="alert">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7.4v6"/><path d="M12 16.4v.2"/><circle cx="12" cy="12" r="8.4"/></svg>
         <p><b>Não conseguimos enviar agora.</b> Tente de novo em alguns minutos ou escreva direto para
-          <a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a>.</p>
+          <a href="mailto:contato@3pontos.com">contato@3pontos.com</a>.</p>
         <button class="btn btn--ghost" type="button" data-form-retry><span>Tentar de novo</span></button>
       </div>
     </form>
@@ -545,7 +548,7 @@
           <span>3pontos</span>
         </a>
         <h4>Nosso Endereço</h4>
-        <span>R. Gomes de Carvalho, 1629 — Vila Olímpia, São Paulo, SP · 04547-006</span>
+        <span>Rua Gomes de Carvalho, 1629, Vila Olímpia, São Paulo/SP · CEP 04.547-006</span>
 
         <!-- O selo vem com a placa branca de fábrica justamente para ficar
              legível em qualquer fundo: no escuro ele entra como veio, sem
@@ -573,8 +576,8 @@
 
       <div class="foot__col" data-reveal>
         <h4>Contato e Endereço</h4>
-        <a href="mailto:contato@3pontos.com.br">contato@3pontos.com.br</a>
-        <a class="foot__social" href="#linkedin" data-placeholder="linkedin" aria-label="3Pontos no LinkedIn">
+        <a href="mailto:contato@3pontos.com">contato@3pontos.com</a>
+        <a class="foot__social" href="https://www.linkedin.com/company/3pontos3/" target="_blank" rel="noopener noreferrer" aria-label="3Pontos no LinkedIn">
           <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="3"/><path d="M8.2 10.4v5.4M8.2 7.9v.02M11.6 15.8v-5.4M11.6 12.9c0-1.6 1-2.6 2.3-2.6s2 .9 2 2.4v3.1"/></svg>
           <span>LinkedIn</span>
         </a>
@@ -603,7 +606,7 @@
     <p class="foot__legal">Adobe, Acrobat, o logotipo Adobe PDF, Adobe Express, o logotipo Adobe Express, Adobe Premiere, After Effects, Creative Cloud, Illustrator, InDesign, Lightroom, Photoshop e o logotipo Photoshop são marcas registradas ou marcas comerciais da Adobe nos Estados Unidos e/ou em outros países. Microsoft, Azure, Microsoft 365, SQL Server, Teams, Windows e Windows Server são marcas registradas ou marcas comerciais do grupo de empresas Microsoft. Google, Gemini, Google Workspace e Google Cloud são marcas da Google LLC. Claude e Anthropic são marcas da Anthropic PBC. OpenAI e ChatGPT são marcas da OpenAI. Autodesk e AutoCAD são marcas da Autodesk, Inc. As marcas citadas pertencem aos seus titulares, e a menção a elas não indica patrocínio ou endosso, salvo onde apresentada como credencial.</p>
 
     <div class="foot__base">
-      <span>© <b id="year">2026</b> 3Pontos Tecnologia · CNPJ 00.000.000/0001-00</span>
+      <span>© <b id="year">2026</b> 3 Pontos Aceleradora Ltda · CNPJ 46.181.096/0001-32</span>
       <span class="foot__clock"><i id="clock">--:--:--</i> São Paulo</span>
       <a href="#inicio" class="foot__top"><span>Voltar ao topo</span><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 13V3M8 3L4 7M8 3l4 4"/></svg></a>
     </div>

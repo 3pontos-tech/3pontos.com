@@ -8,7 +8,7 @@
 :root{
   /* escuro — padrão fora das seções (nav, menu, loader) */
   --bg:#09090A; --bg-1:#0F0F10; --surface:#1C1C1F; --surface-2:#141416;
-  --ink:#FDFDFD; --ink-2:#9C9C9C; --ink-3:#6A6A6D;
+  --ink:#FDFDFD; --ink-2:#9C9C9C; --ink-3:#8F8F95;
   --rule:#2C2C2D; --rule-2:#1E1E20;
   --btn-bg:#DDDDDE; --btn-ink:#09090A;
   --glass:rgb(28 28 31 / .52); --glass-hi:rgb(38 38 42 / .72); --field:rgb(0 0 0 / .22);
@@ -34,14 +34,14 @@
 [data-theme]{background:var(--bg);color:var(--ink)}
 [data-theme="dark"]{
   --bg:#09090A; --bg-1:#0F0F10; --surface:#1C1C1F; --surface-2:#141416;
-  --ink:#FDFDFD; --ink-2:#9C9C9C; --ink-3:#6A6A6D;
+  --ink:#FDFDFD; --ink-2:#9C9C9C; --ink-3:#8F8F95;
   --rule:#2C2C2D; --rule-2:#1E1E20;
   --btn-bg:#DDDDDE; --btn-ink:#09090A;
   --glass:rgb(26 26 29 / .55); --glass-hi:rgb(40 40 45 / .74); --field:rgb(0 0 0 / .22);
 }
 [data-theme="light"]{
   --bg:#FBFBFF; --bg-1:#F4F4F9; --surface:#FFFFFF; --surface-2:#FFFFFF;
-  --ink:#09090A; --ink-2:#4F4F4F; --ink-3:#8A8A90;
+  --ink:#09090A; --ink-2:#4F4F4F; --ink-3:#6B6B71;
   --rule:#E8E9F1; --rule-2:#EFEFF5;
   --btn-bg:#1C1C1F; --btn-ink:#FDFDFD;
   --glass:rgb(255 255 255 / .6); --glass-hi:rgb(255 255 255 / .84); --field:rgb(9 9 10 / .04);
