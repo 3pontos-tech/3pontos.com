@@ -1,0 +1,22 @@
+{
+    "name": "3pontos/consultoria",
+    "description": "Página institucional de consultoria da 3Pontos (consultoria.3pontos.com)",
+    "type": "library",
+    "version": "1.0",
+    "license": "proprietary",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "TresPontosTech\\Consultoria\\": "src/",
+            "TresPontosTech\\Consultoria\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TresPontosTech\\Consultoria\\Providers\\ConsultoriaServiceProvider"
+            ]
+        }
+    }
+}

@@ -4,8 +4,39 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cdf4aac82393e4748c28121f9ef515b5",
+    "content-hash": "ed87d74e6a98f259dc3b1629282555da",
     "packages": [
+        {
+            "name": "3pontos/consultoria",
+            "version": "1.0",
+            "dist": {
+                "type": "path",
+                "url": "app-modules/consultoria",
+                "reference": "1c789b23b549e5fd96ccbaab955075361c6349dc"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TresPontosTech\\Consultoria\\Providers\\ConsultoriaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TresPontosTech\\Consultoria\\": "src/",
+                    "TresPontosTech\\Consultoria\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "proprietary"
+            ],
+            "description": "Página institucional de consultoria da 3Pontos (consultoria.3pontos.com)",
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
         {
             "name": "3pontos/portal",
             "version": "1.0",
@@ -14554,5 +14585,5 @@
         "php": "^8.4"
     },
     "platform-dev": {},
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }
